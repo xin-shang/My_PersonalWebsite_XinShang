@@ -1,0 +1,1722 @@
+/* 谷歌字体 - Poppins 4 5 6 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* 变量 */
+:root {
+        /* 页首 */
+        --header-height: 3.5rem;
+
+        /* 颜色 */      /* Color mode HSL (hue, saturation, lightness) */
+        --first-hue: 41;
+
+        --sat: 64%;
+        --lig: 69%;
+
+        --second-hue: 20;
+
+        --first-color:          hsl(var(--first-hue), var(--sat), var(--lig));          /* 主色 */
+        --first-color-alt:      hsl(var(--first-hue), var(--sat), 65%);                 /* 主色 亮 -4% */
+
+        --title-color:          hsl(var(--second-hue), 15%, 95%);                       /* 标题色 */
+        --text-color:           hsl(var(--second-hue), 8%, 75%);                        /* 色 */
+        --text-color-light:     hsl(var(--second-hue), 4%, 55%);                        /* 浅色 */
+        --title-c:            hsl(228, 8%, 95%);
+        --text-c:             hsl(228, 8%, 65%);
+
+        --body-color-f:       hsl(20, 3%, 21%);                                       /* 网页底色1 底色2的容器色*/
+        --body-color-s:       hsl(264, 3%, 28%);                                      /* 网页底色2 底色一的容器色*/
+        
+        --container-color:    hsl(50, 3%, 28%);                                       /* 容器色 */
+
+        
+
+        /* 字体大小 */
+        --body-font: 'Poppins', sans-serif;
+
+        --biggest-font-size:    2rem;                   /* h */
+        --bigger-font-size:     1.75rem;                /* h0 */
+
+        --h1-font-size:         1.5rem;                 /* h1 */
+        --h2-font-size:         1.25rem;                /* h2 */
+        --h3-font-size:         1rem;                   /* h3 */
+
+        --normal-font-size:     .938rem;                /* h-3.8 */
+
+        --small-font-size:      .813rem;                /* h-3.4 */
+        --smaller-font-size:    .75rem;                 /* h-4   */
+
+        --tiny-font-size:       .625rem;                /* h-4.5 */
+
+        /* 字体宽度 */
+        --font-regular:         400;
+        --font-medium:          500;
+        --font-semi-bold:       600;
+
+        /* z-index */
+        --z-tooltip:            10;
+        --z-fixed:              100;
+        --z-modal:              1000;
+}
+
+/* 大屏字体 */
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 通用 */
+* {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+}
+
+/* 网页全 */
+html {
+        scroll-behavior: smooth;                /* 页面的平滑滚动，不用这个页面会直接跳，不好看 */
+}
+
+/* 多控件字体设置 */
+body,
+button,
+input,
+textarea {
+        font-family: var(--body-font);          /* 字体 */
+        font-size: var(--normal-font-size);     /* 字号 */
+}
+
+/* 网页内容 */
+body {
+        background-color: var(--body-color-s);
+        color: var(--text-color);
+        /* transition: .4s;                        切换主题时使用 */
+}
+
+/* 字 */
+h1, h2, h3 {
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+}
+
+/* 无序列表 */
+ul {
+        list-style: none;               /* 移除列表项前的默认样式，开发者可以更自由地控制<ul>元素的外观 */
+}
+
+/* 超链接 */
+a {
+        text-decoration: none;          /* 删除默认样式，例如下划线 */
+}
+
+/* 按钮 */
+button {
+        cursor: pointer;                /* 鼠标变手指 */
+        border: none;                   /* 无边框 */
+        outline: none;                  /* 无线 */
+}
+
+/* 图片 */
+img,
+svg {
+        max-width: 100%;
+        height: auto;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 容器 */
+.container {
+        max-width: 1120px;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+}
+
+/* 网格 */
+.grid {
+        display: grid;
+        gap: 1.5rem;
+}
+
+/* 底部留白 */
+.bottom {
+        margin-bottom: 2rem;
+}
+
+/* 部分 */
+.section {
+        padding-block: 5rem 2rem;       /* 上边距 5rem 下边距 2rem */
+}
+
+/* 内容 */
+.content {
+        display: grid;
+        row-gap: 2rem;
+}
+
+/* 每部分 - 主标题 副标题 */
+.section__title,
+.section__subtitle {
+        text-align: center;
+        color: var(--title-color);
+        font-weight: var(--font-semi-bold);
+}
+
+/* 每部分 - 主标题 */
+.section__title {
+        font-size: var(--h1-font-size);
+        margin-bottom: 1.5rem;
+}
+
+/* 每部分 - 副标题 */
+.section__subtitle {
+        font-size: var(--small-font-size);
+        color: var(--first-color);
+        margin-bottom: .25rem;
+}
+
+/* 每部分 - 副标题 文字行中 这个不一定用得到 */
+.section__subtitle span {
+        color: var(--first-color);
+}
+
+/* 主 */
+.main {
+        overflow: hidden;       /* 对于动画ScrollReveal，子内容的任何部分都不会在 .main 元素之外显示 */
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 页首 */
+.header {
+        position: fixed;
+        width: 100%;
+        background-color: var(--body-color-f);
+        top: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+}
+
+/* 导航栏 */
+.nav {
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+/* 图标列表 */
+.nav__icon-list {
+        display: flex;
+        column-gap: 1rem;
+}
+
+/* 关闭 & 菜单 */
+.nav__search-icon,
+.nav__user-icon,
+.nav__menu-icon,
+.nav__close {
+        display: flex;
+        font-size: var(--h3-font-size);
+        color: var(--title-color);
+        cursor: pointer;
+}
+
+/* 中大屏幕一下（平板，手机屏幕） */
+@media screen and (max-width: 1023px) {
+        /* 导航栏 */
+        .nav {
+                justify-content: flex-end;
+                column-gap: .75rem;
+        }
+
+        /* 导航栏 - 目录 */
+        .nav__menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                background-color: hsla(0, 0%, 10%, .3);
+                width: 75%;
+                height: 100%;
+                padding: 4.5rem 0 0 3rem;
+                backdrop-filter: blur(24px);            /* 下层涂层模糊 */
+                -webkit-backdrop-filter: blur(24px);    /* Safari */
+                transition: right .4s;                  /* left 左部变化将在 0.4s 内从旧值平滑过渡到新值 */
+        }
+}
+
+/* 导航栏 - 目录 - 列表 */
+.nav__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+}
+
+/* 导航栏 - 目录 - 列表 - 链接 */
+.nav__link {
+        color: var(--title-color);
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        transition: color .4s;
+}
+
+/* 导航栏 - 目录 - 列表 - 链接 - 鼠标放置 */
+.nav__link:hover {
+        color: var(--first-color);
+}
+
+/* 导航栏 - 目录 - 关闭 */
+.nav__close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+}
+
+/* 导航栏 - 菜单开关 */
+.show__menu {
+        right: 0%;
+}
+
+/* 导航栏透明 - 页面向下滚动 50 单位时 */
+.blur-header {
+        background-color: transparent;
+}
+
+/* 导航栏模糊 - 伪元素 */
+.blur-header::after {
+        content: '';
+        position: absolute;
+        width: 1000%;
+        height: 100%;
+        background-color: hsla(0, 0%, 10%, .3);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        top: 0;
+        left: 0;
+        z-index: -1;
+}
+
+/* 导航栏 - 目录 - 位置高亮 */
+.active-link {
+        color: var(--first-color);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+/* 搜索 */
+.search {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: var(--z-fixed);
+        background-color: hsla(20, 3%, 21%, .2);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        padding: 8rem 1.5rem 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .4s;
+}
+
+/* 搜索 - 表单 */
+.search__form {
+        display: flex;
+        align-items: center;
+        column-gap: .5rem;
+        background-color: var(--container-color);
+        box-shadow: 0 8px 32px hsla(20, 3%, 21%, .3);
+        padding-inline: 1rem;
+        border-radius: .5rem;
+        transform: translateY(-1rem);
+        transition: transform .4s;
+}
+
+/* 搜索 - 图标 */
+.search__icon {
+        font-size: var(--h2-font-size);
+        color: var(--title-color);
+}
+
+/* 搜索 - 输入 */
+.search__input {
+        width: 100%;
+        padding-block: 1rem;
+        background-color: var(--container-color);
+        color: var(--title-color);
+        border: none;   /* 移除边框 */
+        outline: none; /* 移除焦点时的轮廓线 */
+}
+
+/* 搜索 - 提示词 */
+.search__input::placeholder {
+        color: var(--text-color);
+}
+
+/* 搜索 - 关闭 */
+.search__close {
+        display: flex;
+        justify-content: center;
+        transform: translateY(-10rem);
+        font-size: var(--h1-font-size);
+        font-weight: var(--font-medium);
+        color: var(--title-color);
+        cursor: pointer;
+}
+
+/* 搜索 - 框 */
+.show-search {
+        opacity: var(--z-modal);
+        pointer-events: initial;
+}
+
+/*  */
+.show-search, .search__form {
+        transform: translateY(0);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 设置 - 块（全） */
+.setting__box {
+        display: grid;
+        row-gap: 2rem;
+        justify-items: center;
+}
+
+/* 设置 - 子项 */
+.setting__item {
+        display: flex;
+        column-gap: 8rem;
+        align-items: center;
+        justify-content: flex-start;
+}
+
+/* 设置 - 选项 */
+.setting__name {
+        width: 8rem;
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-medium);
+        color: var(--title-color);
+}
+
+/* 设置 - 按钮框 */
+.two__button {
+        display: flex;
+        width: 10rem;
+        column-gap: .05rem;
+        justify-content: flex-end;
+}
+
+/* 设置 - 选项按钮 */
+.language__item-box {        
+        background-color: var(--container-color);
+        padding: .4rem .6rem;
+        width: 5rem;
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+        transition: box-shadow .4s, background-color .4s, color .4s;
+}
+
+/* 设置 - 按键左 */
+.left__but {
+        border-top-left-radius: .75rem;
+        border-bottom-left-radius: .75rem;
+}
+
+/* 设置 - 按钮右 */
+.right__but {
+        border-top-right-radius: .75rem;
+        border-bottom-right-radius: .75rem;
+}
+
+/* 设置 - 关闭按钮 */
+.setting__close {
+        position: fixed;
+        top: 12rem;
+        left: 50%;
+        width: auto;
+}
+
+/* 设置 - 选项按钮 - 鼠标放置 */
+.language__item-box:hover {
+        background-color: var(--first-color);
+        color: var(--container-color);
+        box-shadow: 0 8px 24px hsla(var(--first-hue), 100%, 40%, .5);
+}
+
+/* 设置 - 现在的设置选项 */
+.active-select {
+        background-color: var(--first-color);
+        color: var(--container-color);
+        box-shadow: 0 8px 24px hsla(var(--first-hue), 100%, 40%, .5);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 主页 */
+.home {
+        background-color: var(--body-color-s);
+}
+
+/* 主页 - 容器 */
+.home__container {
+        padding-block: 2rem;
+        row-gap: 2.5rem;
+}
+
+/* 主页 - 文本 */
+.home__text {
+        text-align: center;
+}
+
+/* 主页 - 标题 */
+.home__title {
+        font-size: var(--biggest-font-size);
+        font-weight: var(--font-semi-bold);
+}
+
+/* 主页 - 名字 - 应该暂时用不上，除非特意写 span 的 key */
+.home__title span {
+        color: var(--first-color);
+}
+
+/* 主页 - 副标题 */
+.home__subtitle {
+        margin-top: .5rem;
+        font-size: var(--h1-font-size);
+        color: var(--first-color);
+}
+
+/* 主页 - 描述 */
+.home__description {
+        margin-block: 1rem 1.5rem;
+        /* font-size: var(--normal-font-size); */
+}
+
+/* 主页 - 数据 */
+.home__data {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.75rem;
+}
+
+/* 主页 - 数据 - 链接（暂时没有跳转） */
+.home__data-link {
+        background-color: var(--first-color-alt);
+        padding: .75rem;
+        color: var(--body-color-s);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        transition: transform .4s;
+}
+
+/* 主页 - 数据 - 链接 - 块 */
+.home__data-box {
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        justify-items: center;
+        row-gap: .25rem;
+}
+
+/* 主页 - 数据 - 链接 - 图标 */
+.home__data-icon {
+        font-size: 1.5rem;
+        transition: transform .4s;
+}
+
+/* 主页 - 数据 - 链接 - 提示 */
+.home__data-prompt {
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-medium);
+        transition: transform .4s;
+}
+
+/* 主页 - 数据 - 链接 - 数字隐藏 */
+.home__data-num {
+        visibility: hidden;
+        font-size: var(--h2-font-size);
+        transition: transform .4s;
+}
+
+/* 主页 - 数据 - 链接上浮 */
+.home__data-link:hover {
+        transform: translateY(-.5rem);
+}
+
+/* 主页 - 数据 - 链接 - 图标隐藏 */
+.home__data-link:hover .home__data-icon,
+.home__data-link:hover .home__data-prompt {
+        visibility: hidden;
+        transform: translateY(-2.5rem);
+}
+
+/* 主页 - 数据 - 链接 - 数字显示 */
+.home__data-link:hover .home__data-num {
+        visibility: visible;
+        transform: translateY(-2.5rem);
+}
+
+/* 主页 - 图像 */
+.home__image {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.75rem;
+}
+
+/* 主页 - 头像 - 头像框 */
+.home__blob {
+        width: 320px;
+        fill: var(--first-color);
+        filter: drop-shadow(0 16px 16px hsla(var(--first-hue), 100%, 40%, .5));
+}
+
+/* 主页 - 头像 - 照片 */
+.home__img {
+        width: 850px;
+        transform: translateY(20px) translateX(-80px);
+}
+
+/* 主页 - 按钮 */
+.button {
+        display: inline-block;
+        background-color: var(--first-color);
+        padding: 1rem 1.75rem;
+        border-radius: .75rem;
+        color: var(--body-color-s);
+        font-weight: var(--font-medium);
+        transition: box-shadow .4s;
+}
+
+/* 主页 - 按钮 - 鼠标放置 */
+.button:hover {
+        box-shadow: 0 8px 24px hsla(var(--first-hue), 100%, 40%, .5);
+}
+
+/* 主页 - 近期 */
+.home__recent-activity {
+        display: grid;
+        justify-content: center;
+        column-gap: 1.75rem;
+}
+
+/* 主页 - 近期 */
+.home__title-box {
+        position: relative; /* 相对定位 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+}
+
+/* 主页 - 近期 - 月 */
+.home__recent-month {
+        position: absolute; /* 绝对定位 */
+        padding-left: 16rem;
+        transform: translateY(-.8rem);
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-semi-bold);
+        color: var(--first-color);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 介绍 */
+.introduce {
+        background-color: var(--body-color-f);
+}
+
+/* 介绍 - 容器 */
+.introduce__container {
+        padding-top: 2rem;
+        row-gap: 2.5rem;
+}
+
+/* 介绍 - 自身 */
+.introduce__me {
+        display: grid;
+        gap: 2rem;
+        justify-items: center;
+}
+
+/* 介绍 - 图像 */
+.introduce__image {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.75rem;
+}
+
+/* 介绍 - 图像 - 背景 */
+.introduce__blob {
+        width: 320px;
+}
+
+/* 介绍 - 图像 - 背景 - 边框 */
+.introduce__blob path {
+        stroke: var(--first-color);
+}
+
+/* 介绍 - 图像 - 照片 */
+.introduce__img {
+        width: 54rem;
+        transform: translateY(-2.5rem) translateX(-6rem);
+}
+
+/* 介绍 - 描述 */
+.introduce__description {
+        text-align: center;
+        margin: 1rem;
+}
+
+/* 介绍 - 下载CV */
+.download__but {
+        width: 12rem;
+        text-align: center;
+        margin-bottom: 2rem;
+}
+
+/* 介绍 - 经历 */
+.introduce__experience {
+        display: grid;
+        row-gap: 2rem;
+        margin: 1rem;
+}
+
+/* 介绍 - 空间块 */
+.introduce__area {
+        display: grid;
+        row-gap: 1rem;
+}
+
+/* 介绍 - 标题 */
+.introduce__area-title  {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-regular);
+        text-align: center;
+        margin-bottom: 1rem;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 技能 */
+.skills {
+        background-color: var(--body-color-s);
+}
+
+/* 技能 - 容器 */
+.skills__container {
+        padding-block: 2rem;
+}
+
+/* 技能 - 滑动盒子 */
+.skills__silderBox {
+        max-width: 100%;
+        justify-items: center;
+        margin-bottom: 2rem;
+}
+
+/* 技能 - 新容器布局 */
+.silder__container {
+        max-width: 100%;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 项目 */
+.projects {
+        background-color: var(--body-color-f);
+}
+
+/* 项目 - 容器 */
+.projects__container {
+        row-gap: 2rem;
+        justify-content: center;
+        padding-block: 2rem;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 博客 */
+.blogs {
+        background-color: var(--body-color-s);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/*  */
+.timeline {
+        background-color: var(--body-color-f);
+        padding-block: 0rem 0rem;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 联系 */
+.contact {
+        background-color: var(--body-color-f);
+}
+/* .contact {
+        background-color: var(--body-color-s);
+} */
+
+/* 联系 - 容器 */
+.contact__container {
+        margin-bottom: 2rem;
+}
+
+/* 联系 - 表单 / 组 */
+.contact__form,
+.contact__group {
+        display: grid;
+        row-gap: 1rem;
+}
+
+/* 联系 - 表单 */
+.contact__form {
+        position: relative;
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+/* 联系 - 输入 */
+.contact__input {
+        padding: 1rem 1.25rem;
+        border-radius: .5rem;
+        background-color: var(--container-color);
+        color: var(--title-color);
+        border: none;   /* 移除边框 */
+        outline: none;  /* 移除焦点时的轮廓线 */
+}
+
+/* 联系 - 输入 - 提示内容 */
+.contact__input::placeholder {
+        color: var(--text-color);
+}
+
+/* 联系 - 文本框 */
+.contact__form textarea {
+        height: 10rem;
+        resize: none;
+        margin-bottom: 2rem;
+}
+
+/* 联系 - 消息发送 */
+.contact__button {
+        justify-self: center;
+        cursor: pointer;
+}
+
+/* 联系 - 提示信息 */
+.contact__message {
+        position: absolute;
+        left: 0;
+        bottom: 4.5rem;
+        font-size: var(--small-font-size);
+        color: var(--title-color);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+/*  */
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 页脚 */
+.footer {
+        background-color: var(--first-color);
+}
+
+/* 页脚 - 容器 */
+.footer__container {
+        padding: 2rem 0rem 3rem;
+}
+
+/* 页脚 - 标题 */
+.footer__title {
+        color: var(--container-color);
+        text-align: center;
+        margin-bottom: 2rem;
+}
+
+/* 页脚 - 三方网站列表 */
+.footer__list {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.5rem;
+        margin-bottom: 2rem;
+}
+
+/* 页脚 - 列表 - 链接 */
+.footer__link {
+        background-color: var(--container-color);
+        color: var(--title-color);
+}
+
+/* 页脚 - 列表 - 图标 */
+.footer__icon {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-medium);
+}
+
+/* 页脚 - 列表 - 权责 */
+.footer__copy {
+        display: block;
+        text-align: center;
+        font-size: var(--tiny-font-size);
+        color: var(--container-color);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+/* Templates */
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 模版 - 近期 - 循环滚动框 */
+.home__item-scrollbox {
+        width: 100%;
+        height: 18rem;
+        overflow: hidden;
+        /* position: relative; */
+}
+
+/* 模版 - 内容列 */
+.home__content-list {
+        height: auto;
+        width: 100%;
+        box-sizing: border-box;
+}
+
+/* 模版 - 近期 - 内容列 & 子项 */
+.blog__item {
+        margin: 1rem;
+        box-sizing: border-box;
+        height: 12rem;
+}
+
+/* 模版 - 留白 */
+.home__recent_nothing {
+        visibility: hidden;
+}
+
+/* 模版 - 留白变提示 */
+.show_nothing {
+        visibility: visible;
+}
+
+/* 模版 - 内容块 - 种类 & 日期 */
+.category_date {
+        display: flex;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        column-gap: 1rem;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-medium);
+}
+
+/* 模版 - 内容块 - 尖括号 + 种类 */
+.concent__category {
+        display: flex;
+        align-items: center;
+}
+
+/* 模版 - 内容块 - 尖括号 */
+.angle_bracket {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi-bold);
+        color: var(--first-color);
+}
+
+/* 模版 - 内容块 - 种类 */
+.category__name {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi-bold);
+        color: var(--title-c);
+        transition: color .3s;
+}
+
+/* 模版 - 内容块 - 尖括号 左 */
+.left_one {
+        transition: .4s;
+}
+
+/* 模版 - 内容块 - 尖括号 右 */
+.right_one {
+        transition: .4s;
+}
+
+/* 模版 - 内容块 - 尖括号 右 - 鼠标放置 */
+.concent__category:hover .right_one {
+        font-size: var(--h3-font-size);
+        transform: translateX(.25rem);
+}
+
+/* 模版 - 内容块 - 尖括号 左 - 鼠标放置 */
+.concent__category:hover .left_one {
+        font-size: var(--h3-font-size);
+        transform: translateX(-.25rem);
+}
+
+/* 模版 - 内容块 - 种类 - 鼠标放置 */
+.category__name:hover {
+        font-weight: var(--font-semi-bold);
+        color: var(--first-color);
+        text-shadow: 0 8px 24px hsla(var(--first-hue), 100%, 40%, .5);
+}
+
+/* 模版 - 内容块 - 标题 */
+.concent__title {
+        width: 100%;
+        padding-bottom: .5rem;
+        transition: color .4s;
+}
+
+/* 模版 - 内容块 - 标题 - 鼠标放置 */
+.concent__title:hover {
+        text-shadow: 0 12px 24px hsla(var(--first-hue), 100%, 40%, .7);
+}
+
+/* 模版 - 内容块 - 标签水平列 */
+.concent__tag_list {
+        display: flex;
+        column-gap: .75rem;
+        align-items: center;
+        padding-bottom: 1rem;
+        width: 100%;
+        
+        overflow-x: auto;                       /* 当子元素超出容器宽度时，允许水平滚动 */
+        white-space: nowrap;                    /* 防止子元素换行 */
+        -webkit-overflow-scrolling: touch;      /* 在iOS上启用惯性滚动 */
+        scrollbar-width: none;                  /* 在Firefox上隐藏滚动条 */
+        -ms-overflow-style: none;               /* 在IE和Edge上隐藏滚动条 */
+}
+
+/* 针对Webkit浏览器隐藏滚动条 */
+.concent__tag_list::-webkit-scrollbar {
+        display: none;
+}
+
+/* 模版 - 内容块 - 标签子项 */
+.concent__tag_item {
+        font-size: var(--small-font-size);
+        font-weight: var(--font-regular);
+        color: var(--text-c);
+        transition: color .4s, font-size .4s, font-weight .4s;
+}
+
+/* 模版 - 内容块 - 标签子项 - 鼠标放置*/
+.concent__tag_item:hover {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+        color: var(--title-c);
+}
+
+/* 模版 - 内容块 -  */
+.concent__detail-button {
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+}
+
+/* 模版 - 内容块 - 阅读文章键 */
+.concent__detail {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        color: var(--first-color-alt);
+        transition: color .2s;
+}
+
+/* 模版 - 内容块 - 阅读文章键 - 鼠标放置 */
+.concent__detail:hover {
+        color: var(--first-color);
+        font-weight: var(--font-semi-bold);
+        text-shadow: 0 8px 18px hsla(var(--first-hue), 100%, 40%, .5);
+}
+
+/* 模版 - 内容块 - 阅读文章ICON */
+.read_icon {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        color: var(--first-color-alt);
+        transition: color .2s;
+}
+
+/* 模版 - 内容块 - 阅读文章ICON - 鼠标放置 */
+.concent__detail:hover + .read_icon {
+        color: var(--first-color);
+        font-weight: var(--font-semi-bold);
+        text-shadow: 0 8px 18px hsla(var(--first-hue), 100%, 40%, .5);
+        transform: translateX(.25rem);
+}
+
+/* 模版 - 无内容块 */
+.home__recent_nothing {
+        margin-top: 3rem;
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        text-align: center;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 模版 - 经历 - 滚动框 */
+.introduce__experience-scrollbox {
+        width: 100%;
+        height: 14rem;
+        overflow: hidden;
+
+        overflow-y: auto;                       /* 当子元素超出容器时，允许水平滚动 */
+        -webkit-overflow-scrolling: touch;      /* 在iOS上启用惯性滚动 */
+        scrollbar-width: none;                  /* 在Firefox上隐藏滚动条 */
+        -ms-overflow-style: none;               /* 在IE和Edge上隐藏滚动条 */
+}
+
+/* 针对Webkit浏览器隐藏滚动条 */
+.introduce__experience-scrollbox::-webkit-scrollbar {
+        display: none;
+}
+
+/* 模版 - 经历 - 列表 */
+.introduce__content-list {
+        display: grid;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+}
+
+/* 模版 - 经历 - 子组件 */
+.item {
+        display: grid;
+        row-gap: .75rem;
+        margin-bottom: 6rem;
+}
+
+/* 模版 - 经历 - 名&地 */
+.name__location {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+        margin-bottom: .5rem;
+}
+
+/* 模版 - 经历 - 名 */
+.e-name {
+        color: var(--first-color);
+}
+
+/* 模版 - 经历 - 主业&专业 */
+.major {
+        font-size: var(--h1-font-size);
+        margin-bottom: .5rem;
+        text-shadow: 0 12px 24px hsla(var(--first-hue), 100%, 40%, .7);
+}
+
+/* 模版 - 经历 - 细分专业 */
+.university__major-branch {
+        font-size: var(--small-font-size);
+        margin-bottom: .5rem;
+}
+
+/* 模版 - 经历 - 工作内容 */
+.job__content {
+        font-size: var(--small-font-size);
+        margin-bottom: .5rem;
+}
+
+/* 模版 - 经历 - 经历时间 */
+.e-date {
+        color: var(--first-color);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 模版 - 技能 - 框 */
+.skills__item-box {
+        width: 1rem;
+        background-color: var(--body-color-f);
+        padding: 2rem;
+        border-radius: 1.25rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 12px 14px hsla(20, 3%, 21%, .3);
+}
+
+/* 模版 - 技能 - 标题名 */
+.skills__title-name {
+        text-align: center;
+        color: var(--first-color);
+        font-size: var(--h3-font-size);
+        margin-bottom: 2rem;
+}
+
+/* 模版 - 技能 - 列表 */
+.skills__detailList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 创建两列，每列宽度相等 */
+        column-gap: 1.5rem; 
+        row-gap: 1rem;
+}
+
+/* 模版 - 技能 - 列表 */
+.skills__detail-item {
+        display: flex;
+        align-content: center;
+        column-gap: .75rem;
+}
+
+/* 模版 - 技能 - 技能图标 */
+.skills_item-icon {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi-bold);
+        color: var(--first-color);
+        transform: translateY(.4rem);
+}
+
+/* 模版 - 技能 - 技能名称 */
+.skills__name {
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi-bold);
+        align-items: center;
+}
+
+/* 模版 - 技能 - 技能水平 */
+.skills__level {
+        font-size: var(--smaller-font-size);
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/*  */
+.project__filters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        column-gap: .75rem;  
+        width: 100%;
+
+        overflow-x: auto;                       /* 当子元素超出容器宽度时，允许水平滚动 */
+        white-space: nowrap;                    /* 防止子元素换行 */
+        -webkit-overflow-scrolling: touch;      /* 在iOS上启用惯性滚动 */
+        scrollbar-width: none;                  /* 在Firefox上隐藏滚动条 */
+        -ms-overflow-style: none;               /* 在IE和Edge上隐藏滚动条 */
+}
+
+/* 针对Webkit浏览器隐藏滚动条 */
+.project__filters::-webkit-scrollbar {
+        display: none;
+}
+
+/* 当屏幕宽度小于370px时 */ /* 暂时先写这里，看看以后需不需要合体 */
+@media (max-width: 370px) {
+        .project__filters {
+                justify-content: flex-start;
+        }
+}
+
+/*  */
+.project__item {
+        cursor: pointer;
+        color: var(--title-color);
+        padding: .25rem .75rem;
+        font-weight: var(--font-medium);
+        border-radius: .5rem;
+}
+
+/*  */
+.active-project {
+        background-color: var(--first-color);
+        color: var(--container-color);
+}
+
+/* 模版 - 项目 - 卡片列表 */
+.projects__card-list {
+        display: grid;
+        row-gap: 2rem;
+        justify-content: center;
+        /* grid-template-columns: repeat(2, 1fr); 等写响应时改成两列*/
+}
+
+/* 模版 - 项目 - 卡片 */
+.project__card {
+        cursor: pointer;
+        border-radius: 1rem;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: grid;
+}
+
+/* 模版 - 项目 - 直接展示部分 */
+.project__show {
+        width: 100%;
+        height: 100%;
+        display: grid;
+}
+
+/* 模版 - 项目 - 展示图片或细节 */
+.project__ae {
+        position: relative;
+        width: 100%;
+        height: 100%;
+}
+
+/* 模版 - 项目 - 图片 */
+
+/* 模版 - 项目 - 细节框 */
+.project__modal {
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg,
+                                hsla(0, 0%, 0%, 0) 0%,
+                                hsla(var(--first-hue), 100%, 63%, .9) 120%);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        
+        padding-top: 2rem;
+        padding-inline: 3rem;
+        border-start-start-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        transition: bottom .4s, z-index .4s;
+}
+
+/* 模版 - 项目 - 细节框 - 细节 */
+.project__detail {
+        height: 4rem;
+        overflow: hidden;
+        color: var(--container-color);
+}
+
+/* 模版 - 项目 - 细节框 - 标签列表 */
+.project__tag_list {
+        display: flex;
+        justify-content: center;
+}
+
+/* 模版 - 项目 - 细节框 - 标签列表 - 子标签 */
+.project__tag {
+        color: var(--container-color);
+}
+
+/* 模版 - 项目 - 项目名 & 时间 */
+.project__name_time {
+        display: flex;
+        column-gap: 2rem;
+        justify-content: space-between;
+        padding-inline: .2rem;
+        height: 3em;
+}
+
+/* 模版 - 项目 - 项目名 & 时间 */
+.project__name, .project__time {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        color: var(--text-color);
+        height: 3em;
+}
+
+/* 模版 - 项目 - 时间 */
+.project__time {
+        text-align: end;
+}
+
+/* 模版 - 项目 - 鼠标放置 */
+.project__ae:hover .project__modal {
+        bottom: 0;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 博客 - 大滚动框 */
+.big__scrollbox {
+        height: 30rem;
+}
+
+.blogs__list {
+        justify-content: center;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 一键向上 */
+.scroll__up {
+        position: fixed;
+        right: 1rem;
+        bottom: -50%;
+        background-color: var(--first-color-alt);
+        padding: 8px;
+        display: inline-flex;
+        border-radius: .25rem;
+        color: var(--container-color);
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-semi-bold);
+        box-shadow: 0 4px 12px hsla(var(--first-hue), 100%, 40%, .7);
+        z-index: var(--z-tooltip);
+        transition: bottom .4s, transform .4s;
+}
+
+/* 一键向上 - 鼠标放置 */
+.scroll__up:hover {
+        transform: translateY(-.5rem);
+}
+
+/*  */
+.show__scroll {
+        bottom: 3rem;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* 响应式设计 - 小屏幕 */
+@media screen and (max-width: 320px) {
+
+        /*  */
+        .container {
+                margin-inline: 1rem;
+        }
+
+        /*  */
+        .introduce__experience-scrollbox {
+                height: 16rem;
+        }
+
+        /*  */
+        .small__screen {
+                height: 22rem;
+        }
+}
+
+/* 响应式设计 - 个别 */
+@media screen and (min-width: 320px) {
+        /*  */
+        .introduce__experience-scrollbox {
+                height: 14rem;
+        }
+
+        /*  */
+        .small__screen {
+                height: 20rem;
+        }
+
+        /*  */
+        .big__scrollbox {
+                height: 34rem;
+        }
+}
+
+/* 响应式设计 - 中屏幕 */
+@media screen and (min-width: 576px) {
+
+        /*  */
+        .home__container,
+        .introduce__container,
+        .contact__container {
+                grid-template-columns: 480px;
+                justify-content: center;
+        }
+
+        /*  */
+        .projects__card-list {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 2rem;
+                margin-inline: 1rem;
+        }
+}
+
+/* 响应式设计 - 中(大)屏幕 */
+@media screen and (min-width: 768px) {
+        
+        /*  */
+        .container {
+                margin-inline: 1rem;
+        }
+        
+        /*  */
+        .nav__menu {
+                width: 50%;
+        }
+
+        /*  */
+        .home__container,
+        .introduce__container,
+        .contact__container {
+                grid-template-columns: 720px;
+                justify-content: center;
+        }
+        
+        /*  */
+        .home__description {
+                margin-inline: 3rem;
+        }
+
+        /*  */
+        .introduce__description {
+                margin-inline: 3rem;
+        }
+
+        /*  */
+        .home__recent-month {
+                padding-left: 24rem;
+        }
+
+        /*  */
+        .small__screen {
+                height: 18rem;
+        }
+
+        /*  */
+        .big__scrollbox {
+                height: 34rem;
+        }
+
+        /*  */
+        .project__detail {
+                font-size: var(--small-font-size);
+        }
+}
+
+
+/* 杂七杂八，换个字体 */
+@media screen and (min-width: 960px) {
+        /*  */
+        :root {
+                --biggest-font-size:    3rem;           /* h */
+                --bigger-font-size:     2.5rem;         /* h0 */
+        
+                --h1-font-size:         2.25rem;        /* h1 */
+                --h2-font-size:         1.5rem;         /* h2 */
+                --h3-font-size:         1.25rem;        /* h3 */
+        
+                --normal-font-size:     1rem;          /* h-3.8 */
+        
+                --small-font-size:      .938rem;        /* h-3.4 */
+                --smaller-font-size:    .813rem;        /* h-4   */
+        
+                --tiny-font-size:       .75rem;         /* h-4.5 */
+        }
+
+        /*  */
+        .projects__card-list {
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 2rem;
+                margin-inline: 3rem;
+        }
+
+        /*  */
+        .project__name, .project__time {
+                font-size: var(--normal-font-size);
+                font-weight: var(--font-medium);
+        }
+
+        /*  */
+        .home__recent-month {
+                padding-left: 28rem;
+        }
+
+        /*  */
+        .introduce__experience-scrollbox {
+                height: 13rem;
+        }
+
+        /*  */
+        .small__screen {
+                height: 16rem;
+        }
+
+        /*  */
+        .big__scrollbox {
+                height: 36rem;
+        }
+}
+
+
+/* 响应式设计 - 大屏幕 */
+@media screen and (min-width: 1023px) {
+
+        /*  */
+        .section {
+                padding-block: 7rem 2rem;
+        }
+
+        /*  */
+        .nav {
+                height: calc(var(--header-height) + 1rem);
+        }
+
+        /*  */
+        .nav__close,
+        .nav__menu-icon {
+                display: none;
+        }
+
+        .nav__list {
+                flex-direction: row;
+                column-gap: 3rem;
+        }
+
+        /*  */
+        .home__container,
+        .introduce__container,
+        .contact__container {
+                grid-template-columns: none;
+                justify-content: center;
+        }
+
+        /*  */
+        .home__title {
+                margin-bottom: 3rem;
+                margin-inline: 1rem;
+        }
+
+        /*  */
+        .home__subtitle {
+                margin-bottom: 2rem;
+        }
+
+        /*  */
+        .home__description {
+                margin-inline: 8rem;
+                margin-bottom: 2rem;
+        }
+
+        /*  */
+        .introduce__description {
+                margin-inline: 8rem;
+        }
+
+        /*  */
+        .small__screen {
+                height: 15rem;
+        }
+
+        /*  */
+        .contact__form {
+                width: 80rem;
+        }
+
+        /*  */
+        .nav__link {
+                font-size: var(--normal-font-size);
+        }
+
+        /*  */
+        .nav__menu {
+                width: initial;
+        }
+
+        /*  */
+        .blur-header::after {
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+        }
+}
+
+/* 响应式设计 - 大大屏幕 */
+@media screen and (min-width: 1152px) {
+        
+        /*  */
+        .container {
+                margin-inline: auto;
+        }
+
+        /*  */
+        .home__blob {
+                width: 400px;
+        }
+
+        /*  */
+        .introduce__blob {
+                width: 400px;
+        }
+}
+
+
+/* 其他 */
+@media screen and (max-width: 480px) {
+        
+        /*  */
+        .setting__item {
+                margin-bottom: 2rem;
+        }
+        
+        /*  */
+        .setting__item {
+                display: grid;
+                justify-items: center;
+                row-gap: 1rem;
+        }
+        
+        /*  */
+        .setting__name {
+                text-align: center;
+        }
+}

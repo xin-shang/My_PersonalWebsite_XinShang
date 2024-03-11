@@ -1,0 +1,373 @@
+{
+        "userName_en": "Xin Shang",
+        "userName_zh": "尚鑫",
+        "userRole_en": "Programmer & Developer",
+        "userRole_zh": "程序员 & 开发者",
+
+        "facebookURL": "https://www.facebook.com/",
+        "douyinURL": "https://www.douyin.com/",
+        "bilibiliURL": "https://www.bilibili.com/",
+
+        "homeTitle_en": "Welcome to Xin Shang's Personal Website",
+        "homeTitle_zh": "欢迎来到尚鑫的个人网站",
+        "homeSubtitle_en": "I am a Programmer & Project Developer",
+        "homeSubtitle_zh": "我是一名程序员 & 项目开发者",
+        "homeDescription_en": "I'm a programmer and project developer passionate about creating innovative and impactful solutions. Explore my work and let's connect!",
+        "homeDescription_zh": "我是一名对创造创新和有影响力的解决方案充满热情的程序员和项目开发者。探索我的作品并建立联系！",
+
+        "views": 12,
+        "projects": 4,
+        "articles": 8,
+
+        "activityList": [
+                {
+                        "activityId": 1,
+                        "activityCategory": "Web",
+                        "activityCreateDate": "2023 01 24",
+                        "activityTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "activityTagList": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "activityId": 2,
+                        "activityCategory": "Android",
+                        "activityCreateDate": "2023 01 24",
+                        "activityTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "activityTagList": [
+                                "React",
+                                "Java",
+                                "SpringBoot",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "activityId": 3,
+                        "activityCategory": "Linux",
+                        "activityCreateDate": "2023 01 24",
+                        "activityTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "activityTagList": [
+                                "ArchLinux",
+                                "Shell",
+                                "Sever",
+                                "C++"
+                        ]
+                }
+        ],
+
+        "introduceDescription_en": "I'm Shang Xin, a graduate from the University of South Australia with a Bachelor's in Information Technology, specializing in Mobile Application Development. Passionate about crafting innovative mobile solutions.",
+        "introduceDescription_zh": "我是尚鑫，毕业于南澳大学，获得信息技术学士学位，专注于移动应用开发。对创造创新的移动解决方案充满热情。",
+        "educationList": [
+                {
+                        "educationName": "University of South Australia",
+                        "educationLocation": "Adelaide, AU",
+                        "educationMajor": "Bachelor of Information Technology",
+                        "educationMajorBranch": "Mobile Application Development",
+                        "educationDate": "2020 09 - 2023 07"
+                },
+                {
+                        "educationName": "University of South Australia",
+                        "educationLocation": "Adelaide, AU",
+                        "educationMajor": "Bachelor of Information Technology",
+                        "educationMajorBranch": "Mobile Application Development",
+                        "educationDate": "2020 09 - 2023 07"
+                }
+        ],
+        "jobList": [
+                {
+                        "companyName": "UNISA Wing Chun KunFu Club",
+                        "companyLocation": "Adelaide, AU",
+                        "companyProject": "Club Management Mobile Application Developer",
+                        "jobContent": "Led a three-person team to completely design and develop the Android application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
+                        "jobDate": "07 2023 - 12 2023"
+                },
+                {
+                        "companyName": "UNISA Wing Chun KunFu Club",
+                        "companyLocation": "Adelaide, AU",
+                        "companyProject": "Club Management Mobile Application Developer",
+                        "jobContent": "Led a three-person team to completely design and develop the Android application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
+                        "jobDate": "07 2023 - 12 2023"
+                }
+        ],
+        "skillList": [
+                {
+                        "skillTitle": "软件设计",
+                        "skillItemList": [
+                                {
+                                        "skillName": "项目需求文档",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "UI设计(pixso)",
+                                        "skillLevel": "基础"
+                                },
+                                {
+                                        "skillName": "统一建模语言(UML)",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "数据库设计",
+                                        "skillLevel": "精通"
+                                },
+                                {
+                                        "skillName": "API文档",
+                                        "skillLevel": "熟练"
+                                }
+                        ]
+                }, 
+                {
+                        "skillTitle": "前端开发",
+                        "skillItemList": [
+                                {
+                                        "skillName": "HTML",
+                                        "skillLevel": "精通"
+                                },
+                                {
+                                        "skillName": "CSS",
+                                        "skillLevel": "精通"
+                                },
+                                {
+                                        "skillName": "JavaScript",
+                                        "skillLevel": "精通"
+                                },
+                                {
+                                        "skillName": "Swift (IOS)",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "Java (Android)",
+                                        "skillLevel": "精通"
+                                },
+                                {
+                                        "skillName": "React",
+                                        "skillLevel": "精通"
+                                }
+                        ]
+                },
+                {
+                        "skillTitle": "后端开发",
+                        "skillItemList": [
+                                {
+                                        "skillName": "PHP",
+                                        "skillLevel": "精通"
+                                },
+                                {
+                                        "skillName": "Java (spring boot)",
+                                        "skillLevel": "基础"
+                                },
+                                {
+                                        "skillName": "Python",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "C++",
+                                        "skillLevel": "基础"
+                                },
+                                {
+                                        "skillName": "MySQL",
+                                        "skillLevel": "精通"
+                                }
+                        ]
+                },
+                {
+                        "skillTitle": "管理部署",
+                        "skillItemList": [
+                                {
+                                        "skillName": "Git",
+                                        "skillLevel": "基础"
+                                },
+                                {
+                                        "skillName": "Linux (Shell)",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "npm, node.js",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "Nginx",
+                                        "skillLevel": "精通"
+                                }
+                        ]
+                }
+        ],
+        "projectList": [
+                {
+                        "projectId": 1,
+                        "projectCategory": "Main",
+                        "projectName": "Android Application Score",
+                        "projectTime": "2023 07",
+                        "projectImgURL": "",
+                        "projectDetail": "Android Application Score 是一个创新的数据可视化平台，旨在通过直观的图形和实时分析工具，使企业能够深入理解其庞大的数据集。",
+                        "projectTagList": [
+                                "Java",
+                                "JSON",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "projectId": 2,
+                        "projectCategory": "Side",
+                        "projectName": "毛选摘抄解析",
+                        "projectTime": "2023 07",
+                        "projectImgURL": "",
+                        "projectDetail": "毛选摘抄解析旨在深入研究和讲解毛泽东思想精华，提供历史背景、思想内容及其现实意义的全面解析。",
+                        "projectTagList": [
+                                "文章",
+                                "马哲"
+                        ]
+                },
+                {
+                        "projectId": 3,
+                        "projectCategory": "Hobby",
+                        "projectName": "中国历史阶段分割",
+                        "projectTime": "2023 07",
+                        "projectImgURL": "",
+                        "projectDetail": "中国历史阶段分割主要通过对中国全历史的生产力，生产关系和权利结构划分几个核心时期。并解释每个核心时期的主要内容。",
+                        "projectTagList": [
+                                "历史",
+                                "生产",
+                                "权利"
+                        ]
+                },
+                {
+                        "projectId": 4,
+                        "projectCategory": "Other",
+                        "projectName": "双节棍训练",
+                        "projectTime": "2023 07",
+                        "projectImgURL": "",
+                        "projectDetail": "双节棍训练旨在通过系统化教学提升双节棍使用技巧，包括基础操作、进阶组合及实战应用，适合各级别爱好者。",
+                        "projectTagList": [
+                                "双节棍",
+                                "武术",
+                                "训练"
+                        ]
+                },
+                {
+                        "projectId": 5,
+                        "projectCategory": "Hobby",
+                        "projectName": "中国历史阶段分割",
+                        "projectTime": "2023 07",
+                        "projectImgURL": "",
+                        "projectDetail": "中国历史阶段分割主要通过对中国全历史的生产力，生产关系和权利结构划分几个核心时期。并解释每个核心时期的主要内容",
+                        "projectTagList": [
+                                "历史",
+                                "生产",
+                                "权利"
+                        ]
+                }
+        ],
+        
+        "blogList": [
+                {
+                        "blogId": 1,
+                        "blogCategory": "Web",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "blogId": 2,
+                        "blogCategory": "Android",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "React",
+                                "Java",
+                                "SpringBoot",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "blogId": 3,
+                        "blogCategory": "Linux",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "ArchLinux",
+                                "Shell",
+                                "Sever",
+                                "C++"
+                        ]
+                },
+                {
+                        "blogId": 4,
+                        "blogCategory": "Web",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "blogId": 5,
+                        "blogCategory": "Android",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "React",
+                                "Java",
+                                "SpringBoot",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "blogId": 6,
+                        "blogCategory": "Linux",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "ArchLinux",
+                                "Shell",
+                                "Sever",
+                                "C++"
+                        ]
+                },
+                {
+                        "blogId": 7,
+                        "blogCategory": "Android",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "React",
+                                "Java",
+                                "SpringBoot",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "blogId": 8,
+                        "blogCategory": "Linux",
+                        "blogCreateDate": "2023 01 24",
+                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "blogTagList": [
+                                "ArchLinux",
+                                "Shell",
+                                "Sever",
+                                "C++"
+                        ]
+                }
+        ],
+
+        "contactEmail": "shangxin1227@gmail.com",
+
+        "githubURL": "https://github.com/xin-shang",
+        "stackOverflowURL": "https://stackoverflow.com/users/20149582/xin-shang",
+        "linkedInURL": "https://www.linkedin.com/in/xin-shang-5b5b40237/",
+
+        "copyright": "尚鑫 (XinShang). All right reserved"
+}

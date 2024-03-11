@@ -1,0 +1,66 @@
+{
+        "months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+
+        "header" : {
+                "home":         "主页",
+                "introduce":    "简介",
+                "skills":       "技能",
+                "projects":     "项目",
+                "blogs":        "博客",
+                "timeline":     "时间线",
+                "contact":      "联系",
+
+                "user_name":    "",
+                "user_role":    "",
+                
+                "setting_lang":         "语言切换",
+                "setting_theme":        "主题切换"
+        },
+
+        "main" : {
+                "home_title":                   "",
+                "home_subtitle":                "",
+                "home_description":             "",
+                "home_contact":                 "联系我",
+
+                "home_prompt-views":            "访问量",
+                "home_prompt-projects":         "项目量",
+                "home_prompt-articles":         "文章量",
+
+                "home_recent-activity":         "近期活动",
+                "home_recent-nothing":          "很遗憾，这个月什么也没写。",
+                "home_concent_detail":          "阅读文章",
+
+                "section_subtitle-introduce":   "关于我",
+                "section_title-introduce":      "自我介绍",
+                "introduce_description":        "",
+                "introduce_download":           "下载 CV",
+                "introduce_education-title":    "教育",
+                "introduce_job-title":          "工作",
+
+                "section_subtitle-skills":      "我的技能",
+                "section_title-skills":         "技能展示",
+
+                "section_subtitle-projects":    "我的项目",
+                "section_title-projects":       "联合/个人 作品集",
+
+                "project_category_all":         "全部",
+                "project_category_main":        "主业",
+                "project_category_side":        "副业",
+                "project_category_hobby":       "兴趣",
+                "project_category_other":       "其他",
+
+                "section_subtitle-blogs":       "我的日志",
+                "section_title-blogs":          "文章和记录",
+
+                "section_subtitle-contact":     "联系我",
+                "section_title-contact":        "取得联系",
+
+                "send_message_contact":         "发送信息"
+        },
+
+        "footer": {
+                "name_footer":                  "尚鑫"
+        }
+        
+}

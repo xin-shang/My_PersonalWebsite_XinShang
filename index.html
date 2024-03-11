@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- 网站图标 -->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"/>
+        <!-- 图标库 -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/styles.css"/>
+
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
+
+        <title>Xin Shang Website</title>
+</head>
+
+<body>
+        <!-- 页首 -->
+        <header class="header" id="header">
+                <!-- 导航栏 - 容器 -->
+                <nav class="nav container">
+                        <div class="nav__menu" id="nav-menu">
+                                <!-- 导航栏 - 列表 -->
+                                <ul class="nav__list">
+                                        <li class="nav__item">
+                                                <a href="#home" class="nav__link active-link" data-key="home" data-section="header">
+                                                        Home
+                                                </a>
+                                        </li>
+
+                                        <li class="nav__item">
+                                                <a href="#introduce" class="nav__link" data-key="introduce" data-section="header">
+                                                        Introduce
+                                                </a>
+                                        </li>
+                                        
+                                        <li class="nav__item">
+                                                <a href="#skills" class="nav__link" data-key="skills" data-section="header">
+                                                        Skills
+                                                </a>
+                                        </li>
+                                        
+                                        <li class="nav__item">
+                                                <a href="#projects" class="nav__link" data-key="projects" data-section="header">
+                                                        Projects
+                                                </a>
+                                        </li>
+                                        
+                                        <li class="nav__item">
+                                                <a href="#blogs" class="nav__link" data-key="blogs" data-section="header">
+                                                        Blogs
+                                                </a>
+                                        </li>
+                                        
+                                        <li class="nav__item">
+                                                <a href="#timeline" class="nav__link" data-key="timeline" data-section="header">
+                                                        Timeline
+                                                </a>
+                                        </li>
+                                        
+                                        <li class="nav__item">
+                                                <a href="#contact" class="nav__link" data-key="contact" data-section="header">
+                                                        Contact
+                                                </a>
+                                        </li>
+                                </ul>
+
+                                <!-- 列表 - 关闭 -->
+                                <div class="nav__close" id="nav-close">
+                                        <i class="ri-close-line"></i>
+                                </div>
+                        </div>
+
+                        <div class="nav__icon-list">
+                                <!-- 导航栏 - 搜索 -->
+                                <div class="nav__search-icon" id="search-button">
+                                        <i class="ri-search-line"></i>
+                                </div>
+
+                                <!-- 导航栏 - 用户 -->
+                                <div class="nav__user-icon" id="uesr-button">
+                                        <i class="ri-user-line"></i>
+                                </div>
+
+                                <!-- 导航栏 - 设置 -->
+                                <div class="nav__user-icon" id="setting-button">
+                                        <i class="ri-settings-3-line"></i>
+                                </div>
+
+                                <!-- 导航栏 - 目录 -->
+                                <div class="nav__menu-icon" id="nav-menu-icon">
+                                        <i class="ri-menu-line"></i>
+                                </div>
+                        </div>
+                </nav>
+        </header>
+
+        <!-- 搜索 -->
+        <div class="search" id="search">
+                <form action="" class="search__form">
+                        <i class="ri-search-line search__icon"></i>
+                        <input type="search" placeholder="搜索 (Search)" class="search__input">
+                </form>
+                <i class="ri-close-line search__close" id="search-close"></i>
+        </div>
+
+        <!-- 用户 暂时不写 有登录之后再写 -->
+        
+
+        <!-- 设置 -->
+        <div class="setting search" id="sitting">
+                <div class="setting__box">
+                        <!-- 语言切换 -->
+                        <div class="setting__item">
+                                <p class="setting__name" data-key="setting_lang" data-section="header">
+                                        Language
+                                </p>
+                                <div class="two__button">
+                                        <button class="language__item-box left__but" id="english_btn">
+                                                English
+                                        </button>
+                                        <button class="language__item-box right__but" id="chinese_btn">
+                                                中文
+                                        </button>
+                                </div>
+                        </div>
+                        <!-- 主题切换 暂时不写-->
+                        <div class="setting__item">
+                                <p class="setting__name" data-key="setting_theme" data-section="header">
+                                        Theme
+                                </p>
+                                <div class="two__button">
+                                        <button class="language__item-box left__but">
+                                                Night
+                                        </button>
+                                        <button class="language__item-box right__but">
+                                                Light
+                                        </button>
+                                </div>
+                        </div>
+                </div>
+
+                <i class="ri-close-line search__close setting__close" id="setting-close"></i>
+        </div>
+
+        <!-- 内容 -->
+        <main class="main">
+                <!-- 主页 -->
+                <section class="home section" id="home">
+                        <div class="home__container container grid content">
+                                <!-- 文字内容块 -->
+                                <div class="home__text">
+                                        <h1 class="home__title" data-key="home_title" data-section="main">
+                                                Welcome to Xin Shang's Personal Website
+                                        </h1>
+                                        <h3 class="home__subtitle" data-key="home_subtitle" data-section="main">
+                                                I am a Programmer & Project Developer
+                                        </h3>
+                                        <p class="home__description" data-key="home_description" data-section="main">
+                                                I'm a programmer and project developer passionate 
+                                                about creating innovative and impactful solutions. 
+                                                Explore my work and let's connect!
+                                        </p>
+                                        <a href="#contact" class="button" data-key="home_contact" data-section="main">Contact Me</a>
+                                </div>
+
+                                <div class="grid home__l_r">
+                                        <div class="home__left grid">
+                                                <div class="home__data">
+                                                        <a href="" target="_top" class="home__data-link">
+                                                                <div class="home__data-box">
+                                                                        <i class="ri-eye-line home__data-icon"></i>
+                                                                        <p class="home__data-prompt" data-key="home_prompt-views" data-section="main">
+                                                                                Views
+                                                                        </p>
+                                                                        <p class="home__data-num">
+                                                                                13
+                                                                        </p>
+                                                                </div>
+                                                        </a>
+                                                        <a href="#projects" class="home__data-link">
+                                                                <div class="home__data-box">
+                                                                        <i class="ri-briefcase-line home__data-icon"></i>
+                                                                        <p class="home__data-prompt" data-key="home_prompt-projects" data-section="main">
+                                                                                Projects
+                                                                        </p>
+                                                                        <p class="home__data-num">
+                                                                                5
+                                                                        </p>
+                                                                </div>
+                                                                
+                                                        </a>
+                                                        <a href="#blogs" class="home__data-link">
+                                                                <div class="home__data-box">
+                                                                        <i class="ri-file-list-3-line home__data-icon"></i>
+                                                                        <p class="home__data-prompt" data-key="home_prompt-articles" data-section="main">
+                                                                                Articles
+                                                                        </p>
+                                                                        <p class="home__data-num">
+                                                                                13
+                                                                        </p>
+                                                                </div>
+                
+                                                        </a>
+                                                </div>
+                
+                                                <div class="home__image">
+                                                        <svg class="home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
+                                                                <mask id="maskBlob" mask-type="alpha">
+                                                                        <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                                                                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                                                                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                                                                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                                                                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
+                                                                </mask>
+                                                                <g mask="url(#maskBlob)">
+                                                                        <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                                                                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                                                                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                                                                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                                                                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
+                                                                
+                                                                        <rect x="37" width="476" height="630" fill="url(#pattern0)"/>
+                                                                </g>
+                                                                
+                                                                <rect x="37" width="476" height="300" fill="url(#pattern1)"/>
+                                                                
+                                                                <defs>
+                                                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                                                <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                                                                        </pattern>
+                                                                
+                                                                        <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                                                <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
+                                                                        </pattern>
+                                                                
+                                                                        <!-- 插入头像 (建议尺寸:640 x 940) - 暂时使用动漫头像，而且下面还缺一块儿。用真照片的时候记得补上 -->
+                                                                        <image class="home__img" id="imageBlob" width="640"  href="/assets/img/about.png"/>
+                                                                </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                        <div class="home__right">
+                                                <div class="home__recent-activity">
+                                                        <div class="home__title-box">
+                                                                <h3 class="section__title home__recent-title" data-key="home_recent-activity" data-section="main">
+                                                                        Recent Activities 
+                                                                </h3>
+                                                                <p class="home__recent-month">
+                                                                        --
+                                                                </p>
+                                                        </div>
+                                                        
+                                                        <!-- 应该在进入网页时就获取当前月，然后通过数字获取到对应语言的月份表示方法，然后写入到 .json 文件中 -->
+                                                        <div class="home__item-scrollbox" id="home_item-scrollbox">
+                                                                <div class="home__content-list" id="home_content-list">
+                                                                        
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- 介绍 & 教育 -->
+                <section class="introduce section" id="introduce">
+                        <div class="introduce__container container grid content">
+                                <div class="introduce__text">
+                                        <h3 class="section__subtitle" data-key="section_subtitle-introduce" data-section="main">
+                                                About Me
+                                        </h3>
+                                        <h1 class="section__title" data-key="section_title-introduce" data-section="main">
+                                                Introduce Myself
+                                        </h1>
+                                </div>
+
+                                <div class="introduce__me">
+                                        <div class="introduce__image">
+                                                <svg class="introduce__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <mask id="maskBorder" mask-type="alpha">
+                                                                <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
+                                                                171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
+                                                                448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
+                                                                270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
+                                                                439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
+                                                        </mask>
+                                                        <g mask="url(#maskBorder)">
+                                                                <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
+                                                                
+                                                                <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
+                                                                192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
+                                                                580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
+                                                                40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
+                                                                175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
+                                                        </g>
+                                                        
+                                                        <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
+                                                        
+                                                        <defs>
+                                                                <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                                        <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                                                                </pattern>
+                                                        
+                                                                <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                                        <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
+                                                                </pattern>
+                                                        
+                                                                <!-- Insert your profile (recommended size: 640 x 940) -->
+                                                                <image class="introduce__img" id="imageBorder" width="640" height="940" href="/assets/img/about.png"/>
+                                                        </defs>
+                                                </svg>
+                                        </div>
+                                        <p class="introduce__description" data-key="introduce_description" data-section="main">
+                                                I'm Shang Xin, 
+                                                a graduate from the University of South Australia with a Bachelor's in Information Technology, 
+                                                specializing in Mobile Application Development. 
+                                                Passionate about crafting innovative mobile solutions.
+                                        </p>
+                                        <a href="#introduce" class="button download__but" data-key="introduce_download" data-section="main">Download CV</a>
+                                </div>
+
+                                <div class="introduce__experience">
+                                        <div class="introduce__area">
+                                                <h3 class="introduce__area-title" data-key="introduce_education-title" data-section="main">
+                                                        Education
+                                                </h3>
+                                                <div class="introduce__experience-scrollbox" id="introduce_experience-scrollbox">
+                                                        <div class="introduce__content-list" id="education_content-list">
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="introduce__area">
+                                                <h3 class="introduce__area-title" data-key="introduce_job-title" data-section="main">
+                                                        Job
+                                                </h3>
+                                                <div class="introduce__experience-scrollbox small__screen" id="introduce_experience-scrollbox">
+                                                        <div class="introduce__content-list" id="job_content-list">
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- 技能 -->
+                <section class="skills section" id="skills">
+                        <div class="skills__container container grid"> <!-- grid -->
+                                <div class="bottom content">
+                                        <div class="skills__text">
+                                                <h3 class="section__subtitle" data-key="section_subtitle-skills" data-section="main">
+                                                        My Skills
+                                                </h3>
+                                                <h1 class="section__title" data-key="section_title-skills" data-section="main">
+                                                        Skills Experience
+                                                </h1>
+                                        </div>
+
+                                        <div class="skills__silderBox silder__container swiper" id="skills_silderBox"> <!-- swiper -->
+                                                <div class="skills__boxList swiper-wrapper" id="skills_boxList"> <!-- swiper-wrapper -->
+
+                                                </div>
+                                                <div class="swiper-pagination"></div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- 项目 -->
+                <section class="projects section" id="projects">
+                        <div class="projects__container container grid">
+                                <div class="content">
+                                        <div class="projects__text">
+                                                <h3 class="section__subtitle" data-key="section_subtitle-projects" data-section="main">
+                                                        My Projects
+                                                </h3>
+                                                <h1 class="section__title" data-key="section_title-projects" data-section="main">
+                                                        Joint/Solo Portfolio
+                                                </h1>
+                                        </div>
+
+                                        <div class="project__filters" id="project_filters">
+                                                <!--  -->
+                                        </div>
+
+                                        <div class="introduce__experience-scrollbox big__scrollbox" id="blogs_scrollbox">
+                                                <div class="projects__card-list" id="projects_card-list">
+
+                                                </div>
+                                        </div>
+
+                                </div>
+                        </div>
+                </section>
+
+                <!-- 文章（博客） --> <!-- 暂时只写主页日志块，文章不多。但是以后可能会直接写一个展示所以博客简介的页面。 -->
+                <section class="blogs section" id="blogs">
+                        <div class="blogs__container container grid">
+                                <div class="content">
+                                        <div class="blogs__text">
+                                                <h3 class="section__subtitle" data-key="section_subtitle-blogs" data-section="main">
+                                                        My blogs
+                                                </h3>
+                                                <h1 class="section__title" data-key="section_title-blogs" data-section="main">
+                                                        Articles & Record
+                                                </h1>
+                                        </div>
+
+                                        <div class="project__filters blogs__filters" id="blogs_filters">
+                                                <!-- 暂时不写，博客太少，但是以后可能需要年份筛选器 -->
+                                        </div>
+
+                                        <div class="introduce__experience-scrollbox big__scrollbox" id="blogs_scrollbox">
+                                                <div class="introduce__content-list blogs__list" id="blogs_list">
+                                                        <!--  -->
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- 时间轴 -->
+                <section class="timeline section" id="timeline">
+                <!-- 暂时不写了 -->
+                </section>
+
+                <!-- 联系 -->
+                <section class="contact section" id="contact">
+                        <div class="contact__container container grid">
+                                <div class="content">
+                                        <div class="contact__text">
+                                                <h3 class="section__subtitle" data-key="section_subtitle-contact" data-section="main">
+                                                        Contact Me
+                                                </h3>
+                                                <h1 class="section__title" data-key="section_title-contact" data-section="main">
+                                                        Get In Touch
+                                                </h1>
+                                        </div>
+
+                                        <div class="Contact__form">
+                                                <form action="" class="contact__form" id="contact-form">
+                                                        <div class="contact__group">
+                                                                <input type="text" name="user_name" required placeholder="名字 (Name)" class="contact__input">
+                                                                <input type="email" name="user_email" required placeholder="邮箱 (Email)" class="contact__input">
+                                                        </div>
+                                                        <textarea name="user_project" required placeholder="内容/信息 (Content/Message)" class="contact__input"></textarea>
+                                                        <p class="contact__message" id="contact-message">
+                                                                
+                                                        </p>
+                                                        <button type="submit" class="button contact__button" data-key="send_message_contact" data-section="main">
+                                                                Send Message
+                                                        </button>
+                                                </form>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+                <div class="footer__container container">
+                        <h1 class="footer__title" data-key="name_footer" data-section="footer">
+                                Xin Shang
+                        </h1>
+
+                        <ul class="footer__list">
+                                <a href="https://github.com/xin-shang" class="footer__link home__data-link">
+                                        <i class="footer__icon ri-github-line"></i>
+                                </a>
+                                <a href="https://stackoverflow.com/users/20149582/xin-shang" class="footer__link home__data-link">
+                                        <i class="footer__icon ri-stack-overflow-line"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/xin-shang-5b5b40237/" class="footer__link home__data-link">
+                                        <i class="footer__icon ri-linkedin-box-line"></i>
+                                </a>    
+                        </ul>
+
+                        <span class="footer__copy">
+                                &#169; 尚鑫 (XinShang). All right reserved
+                        </span>
+                </div>
+        </footer>
+
+        <!-- 一键向上 -->
+        <a href="#" class="scroll__up" id="scroll-up">
+                <i class="ri-arrow-up-line"></i>
+        </a>
+
+        
+        <!-- JS -->
+        <script src="assets/js/change-lan.js" type="module"></script>
+        <script src="assets/js/tool/swiper-bundle.min.js"></script>
+        <script src="assets/js/tool/mixitup.min.js"></script>
+        <script src="assets/js/tool/email.min.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+</html>

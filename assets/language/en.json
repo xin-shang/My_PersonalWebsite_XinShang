@@ -1,0 +1,66 @@
+{
+        "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+
+        "header" : {
+                "home":         "Home",
+                "introduce":    "Introduce",
+                "skills":       "Skills",
+                "projects":     "Projects",
+                "blogs":        "Blogs",
+                "timeline":     "Timeline",
+                "contact":      "Contact",
+
+                "user_name":    "",
+                "user_role":    "",
+
+                "setting_lang":         "Language",
+                "setting_theme":        "Theme"
+        },
+
+        "main" : {
+                "home_title":                   "",
+                "home_subtitle":                "",
+                "home_description":             "",
+                "home_contact":                 "Contact Me",
+
+                "home_prompt-views":            "Views",
+                "home_prompt-projects":         "Projects",
+                "home_prompt-articles":         "Articles",
+
+                "home_recent-activity":         "Recent Activities",
+                "home_recent-nothing":          "Unfortunately, I haven't written anything this month.",
+                "home_concent_detail":          "Read Article",
+
+                "section_subtitle-introduce":   "About Me",
+                "section_title-introduce":      "Introduce Myself",
+                "introduce_description":        "",
+                "introduce_download":           "Download CV",
+                "introduce_education-title":    "Education",
+                "introduce_job-title":          "Job",
+
+                "section_subtitle-skills":      "My Skills",
+                "section_title-skills":         "Skills Display",
+
+                "section_subtitle-projects":    "My Projects",
+                "section_title-projects":       "Joint/Solo Portfolio",
+
+                "project_category_all":         "All",
+                "project_category_main":        "Main",
+                "project_category_side":        "Side",
+                "project_category_hobby":       "Hobby",
+                "project_category_other":       "Other",
+
+                "section_subtitle-blogs":       "My blogs",
+                "section_title-blogs":          "Articles & Record",
+
+                "section_subtitle-contact":     "Contact Me",
+                "section_title-contact":        "Get In Touch",
+
+                "send_message_contact":         "Send Message"
+        },
+
+        "footer": {
+                "name_footer":                  "Xin Shang"
+        }
+        
+}

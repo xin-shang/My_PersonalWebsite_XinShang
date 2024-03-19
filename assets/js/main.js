@@ -50,6 +50,70 @@ if(navClose) {
                 navMenu.classList.remove('show__menu')
         })
 }
+    
+
+/**
+ * 头部透明
+*/ 
+function blurHeader() {
+        const header = document.getElementById('header');
+        window.scrollY >= 50    ? header.classList.add('blur-header') 
+                                : header.classList.remove('blur-header');
+}
+window.addEventListener('scroll', blurHeader);
+
+
+/**
+ * 内容 - 技能 - 滑动框
+*/ 
+let swiperTestimonial = new Swiper(".skills__silderBox", {
+        spaceBetween: 24,
+        loop: true,
+        grabCursor: true,
+
+        pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+        },
+
+        breakpoints: {
+                136: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                },
+                562: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                },
+                1020: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                },
+        }
+});
+
+
+/**
+ * 内容 - 邮件 - 发送消息
+*/
+const contactFrom = document.getElementById('contact-form'),
+        contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) => {
+        e.preventDefault();     // 阻止事件的默认行为，阻止表单提交到URL
+
+        // serviceID - templateID - #form - publicKey
+        emailjs.sendForm('service_rlixuu7', 'template_jt886hn', '#contact-form', 'V6FBN_0TTq3qaYc3F')
+        .then(() => {
+                contactMessage.textContent = 'Message sent successfully';               // 显示已发送消息
+        }, () => {
+                contactMessage.textContent = 'Message not sent (service error)';        // 显示未发送消息
+        })
+}
+
+contactFrom.addEventListener('submit', sendEmail);
+
+
 
 /**
  * 其他隐藏菜单
@@ -61,6 +125,8 @@ document.addEventListener('click', function(e) {
                 navMenu.classList.remove('show__menu');         // 如果不是，移除show__menu类，以隐藏菜单
         }
 });
+
+
 
 /**
  * 屏幕位置 & 菜单子项
@@ -108,52 +174,149 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollSmoothlyToSection();
         window.addEventListener('scroll', scrollActive);
 });
-    
-
-
-/** ---------------------------------------------------------------------------------------------------------------------- **/ 
-/** ---------------------------------------------------------------------------------------------------------------------- **/ 
 
 
 /**
- * 头部透明
-*/ 
-const blurHeader = () => {
-        const header = document.getElementById('header');
-        this.scrollY >= 50      ? header.classList.add('blur-header') 
-                                : header.classList.remove('blur-header');
+ * 显示一键向上
+*/
+function scrollUp() {
+        const scrollUp = document.getElementById('scroll-up');
+        window.scrollY >= 350   ? scrollUp.classList.add('show__scroll') 
+                                : scrollUp.classList.remove('show__scroll');
 }
-window.addEventListener('scroll', blurHeader);
+window.addEventListener('scroll', scrollUp);
 
-
-/** ---------------------------------------------------------------------------------------------------------------------- **/ 
-/** ---------------------------------------------------------------------------------------------------------------------- **/ 
 
 /**
- * 内容 - 主页 - 自动滚动框
- * 暂时不优化了
-*/ 
-// 变量
-const sumBlogNum = 4;
+ * 
+*/
+const scrollToTopButton = document.getElementById('scroll-up');
+scrollToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();             // 阻止链接默认行为 (不进行跳转)
 
-// 异步加载博客盒
-async function loadBlogBoxTemplate(contentItem) {
-        const response = await fetch('templates.html');                         // 请求文件
-        const text = await response.text();                                     // 解析文件内容为文本
-        const html = new DOMParser().parseFromString(text, 'text/html');        // 获取文本内容为 HTMLDocument 对象
-        const template = html.querySelector('#blog_box');                       // 
+        window.scrollTo({
+                top: 0,                 // 目标位置（页面顶部）
+                behavior: 'smooth'      // 指定滚动行为为“平滑滚动”
+        });
+});
 
-        // 将模板内容克隆并插入到指定位置
-        contentItem.appendChild(template.content.cloneNode(true));
-}
 
-// 异步博客盒列表添加
-async function loopBlogBox(sumNum) {
-        const contentList = document.getElementById('home_content-list');
-        for(let i = 0; i < sumNum; i++) {
-                loadBlogBoxTemplate(contentList);
+
+
+
+/**
+ * 
+*/
+const storedArray = JSON.parse(sessionStorage.getItem('activityList')); // 应该加限制条件
+const activitySumNum = storedArray.length;
+
+let isFirstCall = true;
+
+// 输出
+outputItem(activitySumNum);
+
+// 滚动，鼠标控制
+document.addEventListener('DOMContentLoaded', function(){
+        const box = document.getElementById('home_item-scrollbox');             // yi ge
+        let scrollInterval;
+        
+        // 
+        if(activitySumNum > 1) {
+                // 鼠标悬停时停止滚动
+                box.addEventListener('mouseenter', function() {
+                        clearInterval(scrollInterval); 
+                });
+                
+                // 鼠标移出时继续滚动
+                box.addEventListener('mouseleave', function() {
+                        startScroll(activitySumNum, storedArray); 
+                });
+
+                // 初始化滚动
+                startScroll(activitySumNum, storedArray);
+        }
+
+
+        // 
+        function startScroll(activitySumNum, storedArray) {
+                scrollInterval = setInterval(function() {
+                        checkContinuous(activitySumNum, storedArray);                            // yi ge
+                        box.scrollTop += 1; // 每次调用滚动1像素s
+                }, 20); // 调整这个值以改变滚动速度
+        }
+
+
+        // 保持循环的连续性
+        async function checkContinuous(sumNum, storedArray) {
+                const box = document.getElementById('home_item-scrollbox');     // yi ge
+                const boxNum = box.clientHeight;
+
+                // 判定是否是第一次调用 scrollMidNum
+                let scrollMidNum;
+
+                if (isFirstCall) {
+                        scrollMidNum = 0;       // 如果是第一次调用，设置scrollMidNum为0
+                        isFirstCall = false;    // 更新标志，以便下次调用不会进入这个分支
+                } else {
+                        scrollMidNum = box.scrollHeight / 2 - box.scrollTop;    // 非首次调用，使用计算结果
+                }
+
+                // scrollMidNum < boxNum 就添加
+                if(scrollMidNum < boxNum){     
+                        loopActivityList(storedArray);
+                        createEmptyBlogItem()
+                        
+                        const blogItems = box.getElementsByClassName('blog__item') 
+                        const blogItemNum = blogItems.length;
+                        const eachGroupNum = sumNum + 1;
+
+                        // 检查需不需要删除前面的子项
+                        if(eachGroupNum * 2 < blogItemNum && blogItems[0]) {
+                                for (let i = 0; i < eachGroupNum; i++) {
+                                        blogItems[0].parentNode.removeChild(blogItems[0]);
+                                }
+                        }
+                }
+        }
+
+        
+        
+});
+
+
+// 异步输出列表内容
+async function outputItem(sumNum) {
+        if(sumNum === 0) {
+                await addShowNothing(true);
+        }if (sumNum === 1) {
+                loopActivityList(storedArray);
+                createEmptyBlogItem()
+        } else {
+                loopActivityList(storedArray);
+                createEmptyBlogItem()
+                loopActivityList(storedArray);
+                createEmptyBlogItem()
+                loopActivityList(storedArray);
+                createEmptyBlogItem()
         }
 }
+
+
+// 
+function loopActivityList(storedArray) {
+        storedArray.forEach(activity => {
+                const id = activity.activityId;
+                const category = activity.activityCategory;
+                const date = activity.activityCreateDate;
+                const title = activity.activityTitle;
+                const tags = activity.activityTagList;
+                
+                const item = createActivityItem(id, category, date, title, tags);
+                
+                document.getElementById('home_content-list').appendChild(item);
+        });
+}
+
 
 // 异步无内容盒添加
 async function addShowNothing(showNothing) {
@@ -175,246 +338,78 @@ async function addShowNothing(showNothing) {
         contentList.appendChild(clone);
 }
 
-let isFirstCall = true;
-
-// 保持循环的连续性
-function checkContinuous(sumNum) {
-        const box = document.getElementById('home_item-scrollbox');     // yi ge
-        const boxNum = box.clientHeight;
-
-        // 判定是否是第一次调用 scrollMidNum
-        let scrollMidNum;
-
-        if (isFirstCall) {
-                scrollMidNum = 0;       // 如果是第一次调用，设置scrollMidNum为0
-                isFirstCall = false;    // 更新标志，以便下次调用不会进入这个分支
-        } else {
-                scrollMidNum = box.scrollHeight / 2 - box.scrollTop;    // 非首次调用，使用计算结果
-        }
-
-        // scrollMidNum < boxNum 就添加
-        if(scrollMidNum < boxNum){
-                loopBlogBox(sumBlogNum);                                // yi ge
-                addTemplate('#scroll_more-space', 'home_content-list');
-                
-                const blogItems = box.getElementsByClassName('blog__item')         // yi ge
-                const blogItemNum = blogItems.length;
-                const eachGroupNum = sumNum + 1;
-
-                // 检查需不需要删除前面的子项
-                if(eachGroupNum * 2 < blogItemNum && blogItems[0]) {
-                        for (let i = 0; i < eachGroupNum; i++) {
-                                blogItems[0].parentNode.removeChild(blogItems[0]);
-                        }
-                }
-        }
-}
-
-// 异步输出列表内容
-async function outputItem(sumNum) {
-        if(sumNum === 0) {
-                await addShowNothing(true);
-        }if (sumNum === 1) {
-                loopBlogBox(sumBlogNum);
-                addTemplate('#scroll_more-space', 'home_content-list');
-        } else {
-                loopBlogBox(sumBlogNum);
-                addTemplate('#scroll_more-space', 'home_content-list');
-                loopBlogBox(sumBlogNum);
-                addTemplate('#scroll_more-space', 'home_content-list');
-        }
-}
-
-// 输出
-outputItem(sumBlogNum);
-
-// 滚动，鼠标控制
-document.addEventListener('DOMContentLoaded', function(){
-        const box = document.getElementById('home_item-scrollbox');             // yi ge
-        let scrollInterval;
-
-        function startScroll() {
-                scrollInterval = setInterval(function() {
-                        checkContinuous(sumBlogNum);                            // yi ge
-                        box.scrollTop += 1; // 每次调用滚动1像素s
-                }, 20); // 调整这个值以改变滚动速度
-        }
-        
-        if(sumBlogNum > 1) {
-                // 鼠标悬停时停止滚动
-                box.addEventListener('mouseenter', function() {
-                        clearInterval(scrollInterval); 
-                });
-                
-                // 鼠标移出时继续滚动
-                box.addEventListener('mouseleave', function() {
-                        startScroll(); 
-                });
-
-                // 初始化滚动
-                startScroll();
-        }
-        
-});
-
-
-/** ---------------------------------------------------------------------------------------------------------------------- **/ 
-/** ---------------------------------------------------------------------------------------------------------------------- **/ 
-
-/**
- * 内容 - 介绍 - 普通滚动框
-*/ 
-// 变量
-const sumEducationNum = 1;
-
-// 现在暂时显示一组，以后可能要改为根据数据数量遍历
-addTemplates('#education_box', 'education_content-list', 2);
-addTemplates('#job_box', 'job_content-list', 2);
-
-
-/**
- * 内容 - 技能 - 框
-*/ 
-// 这段代码重复率很高，完全体记得优化一下
-addTemplates('#skills_box', 'skills_boxList', 3);
-
-/**
- * 内容 - 技能 - 滑动框
-*/ 
-let swiperTestimonial = new Swiper(".skills__silderBox", {
-        spaceBetween: 24,
-        loop: true,
-        grabCursor: true,
-
-        pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-        },
-
-        breakpoints: {
-                136: {
-                        slidesPerView: 1,
-                        spaceBetween: 40,
-                },
-                562: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                },
-                1020: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                },
-        }
-});
-
-
-/**
- * 内容 - 项目
-*/ 
-async function initProjectFilter() {
-        await addTemplate('#projects_box-filters', 'project_filters');
-        await addTemplates('#project_box', 'projects_card-list', 4); // 如果需要这个函数的话
-    
-        // 筛选器转换
-        const linkWork = document.querySelectorAll('.project__item');
-    
-        function activeWork() {
-                linkWork.forEach(l => l.classList.remove('active-project'));
-                this.classList.add('active-project');
-        }
-    
-        linkWork.forEach(l => l.addEventListener('click', activeWork));
-
-        // 项目 - 选择器
-        function initializeMixitup() {
-                let mixer = mixitup('.projects__card-list', {
-                        selectors: {
-                                target: '.project__card'
-                        },
-                        animation: {
-                                duration: 300
-                        }
-                });
-        }
-        initializeMixitup();
-}
-    
-initProjectFilter();
-
-
-/**
- * 内容 - 日志
-*/ 
-addTemplates('#blog_box', 'blogs_list', 8);
-
-
-/**
- * 内容 - 邮件 - 发送消息
-*/
-const contactFrom = document.getElementById('contact-form'),
-        contactMessage = document.getElementById('contact-message');
-
-const sendEmail = (e) => {
-        e.preventDefault(); // 阻止事件的默认行为，阻止表单提交到URL
-
-        // serviceID - templateID - #form - publicKey
-        emailjs.sendForm('service_rlixuu7', 'template_jt886hn', '#contact-form', 'V6FBN_0TTq3qaYc3F')
-        .then(() => {
-                // 显示已发送消息
-                contactMessage.textContent = 'Message sent successfully';
-        }, () => {
-                // 显示未发送消息
-                contactMessage.textContent = 'Message not sent (service error)';
-        })
-}
-
-contactFrom.addEventListener('submit', sendEmail);
-
-
-/**
- * 公用方法
-*/ 
-// 暂时只用这两个，但是以后可能要插入数据，到时候再想办法，是直接写方法带着数据变量 还是 先输出结构后插入数据
-async function addTemplate(templateId, contentListId) {
-        const response = await fetch('templates.html');                         // 请求文件一次
-        const text = await response.text();                                     // 解析文件内容为文本
-        const html = new DOMParser().parseFromString(text, 'text/html');        // 获取文本内容为 HTMLDocument 对象
-        const template = html.querySelector(templateId);                        // 根据提供的ID获取模板
-      
-        const contentList = document.getElementById(contentListId);             // 根据提供的ID获取内容列表
-        contentList.appendChild(template.content.cloneNode(true));              // 克隆模板并添加到内容列表
-}
-
-async function addTemplates(templateId, contentListId, count) {
-        const response = await fetch('templates.html');                         // 请求文件一次
-        const text = await response.text();                                     // 解析文件内容为文本
-        const html = new DOMParser().parseFromString(text, 'text/html');        // 获取文本内容为 HTMLDocument 对象
-        const template = html.querySelector(templateId);                        // 根据提供的ID获取模板
-      
-        const contentList = document.getElementById(contentListId);             // 根据提供的ID获取内容列表
-        for (let i = 0; i < count; i++) {
-                contentList.appendChild(template.content.cloneNode(true));      // 循环克隆模板并添加到内容列表
-        }
-}
-
-/**
- * 显示一键向上
-*/
-const scrollUp = () => {
-        const scrollUp = document.getElementById('scroll-up');
-        this.scrollY >= 350 ? scrollUp.classList.add('show__scroll') 
-                                : scrollUp.classList.remove('show__scroll');
-}
-window.addEventListener('scroll', scrollUp);
 
 // 
-const scrollToTopButton = document.getElementById('scroll-up');
+function createEmptyBlogItem() {
+        const blogItem = document.createElement('div');
+        blogItem.className = 'blog__item';  
+        document.getElementById('home_content-list').appendChild(blogItem);
+}
 
-scrollToTopButton.addEventListener('click', function(e) {
-        e.preventDefault(); // 阻止链接默认行为 (不进行跳转)
 
-        window.scrollTo({
-                top: 0,                 // 目标位置（页面顶部）
-                behavior: 'smooth'      // 指定滚动行为为“平滑滚动”
+// 
+function createActivityItem(id, category, date, title, tags) {
+        // 创建顶级容器
+        const blogItem = document.createElement('div');
+        blogItem.className = 'blog__item';
+        blogItem.id = `blog_item-${id - 1}`;    // 可能真的调整成 id
+
+        // 创建日期和分类的容器
+        const categoryDate = document.createElement('div');
+        categoryDate.className = 'category_date';
+
+        const categoryLink = document.createElement('a');
+        categoryLink.href = "#home";
+        categoryLink.className = 'concent__category';
+        
+        const leftBracket = document.createElement('i');
+        leftBracket.className = 'angle_bracket left_one ri-arrow-left-wide-line';
+        
+        const categoryName = document.createElement('p');
+        categoryName.className = 'category__name';
+        categoryName.id = 'category-name';
+        categoryName.textContent = category;
+
+        const rightBracket = document.createElement('i');
+        rightBracket.className = 'angle_bracket right_one ri-arrow-right-wide-line';
+
+        // 将分类名称和箭头添加到链接中
+        categoryLink.appendChild(leftBracket);
+        categoryLink.appendChild(categoryName);
+        categoryLink.appendChild(rightBracket);
+
+        // 创建并设置日期
+        const dateP = document.createElement('p');
+        dateP.className = 'concent__date';
+        dateP.id = 'concent-date';
+        dateP.textContent = date;
+
+        // 将链接和日期添加到其容器中
+        categoryDate.appendChild(categoryLink);
+        categoryDate.appendChild(dateP);
+
+        // 创建并设置标题
+        const titleH3 = document.createElement('h3');
+        titleH3.className = 'concent__title';
+        titleH3.id = 'concent_title';
+        titleH3.textContent = title;
+
+        // 创建标签列表
+        const tagListDiv = document.createElement('div');
+        tagListDiv.className = 'concent__tag_list';
+        tagListDiv.id = 'concent-tag-list';
+        tags.forEach(tag => {
+                const tagA = document.createElement('a');
+                tagA.href = "#";
+                tagA.className = 'concent__tag_item';
+                tagA.textContent = tag;
+                tagListDiv.appendChild(tagA);
         });
-});
+
+        // 将所有部分添加到顶级容器
+        blogItem.appendChild(categoryDate);
+        blogItem.appendChild(titleH3);
+        blogItem.appendChild(tagListDiv);
+
+        return blogItem;
+}

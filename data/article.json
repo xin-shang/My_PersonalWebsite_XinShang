@@ -15,22 +15,23 @@
         "homeDescription_en": "I'm a programmer and project developer passionate about creating innovative and impactful solutions. Explore my work and let's connect!",
         "homeDescription_zh": "我是一名对创造创新和有影响力的解决方案充满热情的程序员和项目开发者。探索我的作品并建立联系！",
 
-        "views": 12,
-        "projects": 4,
+        "views": 14,
+        "projects": 6,
         "articles": 8,
 
         "activityList": [
                 {
                         "activityId": 1,
-                        "activityCategory": "Web",
+                        "activityCategory": "IT",
                         "activityCreateDate": "2023 01 24",
-                        "activityTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "activityTitle": "随着信息技术新时代的到来，程序员的自我修养应该向哪个方向发展",
                         "activityTagList": [
-                                "HTML",
-                                "CSS",
-                                "JavaScript",
-                                "PHP",
-                                "MySQL"
+                                "个人发展",
+                                "系统架构",
+                                "数据结构",
+                                "算法",
+                                "人工智能",
+                                "需求挖掘"
                         ]
                 },
                 {
@@ -120,6 +121,55 @@
                         ]
                 }, 
                 {
+                        "skillTitle": "编程语言",
+                        "skillItemList":[
+                                {
+                                        "skillName": "C++",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "Java",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "Python",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "PHP",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "JavaScript",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "TypeScript",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "HTML",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "CSS",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "Swift",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "SQL",
+                                        "skillLevel": "熟练"
+                                },
+                                {
+                                        "skillName": "Shell",
+                                        "skillLevel": "熟练"
+                                }
+                        ]
+                },
+                {
                         "skillTitle": "前端开发",
                         "skillItemList": [
                                 {
@@ -198,10 +248,10 @@
         "projectList": [
                 {
                         "projectId": 1,
-                        "projectCategory": "Main",
+                        "projectCategory": "main",
                         "projectName": "Android Application Score",
                         "projectTime": "2023 07",
-                        "projectImgURL": "",
+                        "projectImgURL": "assets/img/project_eg.jpg",
                         "projectDetail": "Android Application Score 是一个创新的数据可视化平台，旨在通过直观的图形和实时分析工具，使企业能够深入理解其庞大的数据集。",
                         "projectTagList": [
                                 "Java",
@@ -211,10 +261,10 @@
                 },
                 {
                         "projectId": 2,
-                        "projectCategory": "Side",
+                        "projectCategory": "side",
                         "projectName": "毛选摘抄解析",
                         "projectTime": "2023 07",
-                        "projectImgURL": "",
+                        "projectImgURL": "assets/img/project_eg.jpg",
                         "projectDetail": "毛选摘抄解析旨在深入研究和讲解毛泽东思想精华，提供历史背景、思想内容及其现实意义的全面解析。",
                         "projectTagList": [
                                 "文章",
@@ -223,10 +273,10 @@
                 },
                 {
                         "projectId": 3,
-                        "projectCategory": "Hobby",
+                        "projectCategory": "hobby",
                         "projectName": "中国历史阶段分割",
                         "projectTime": "2023 07",
-                        "projectImgURL": "",
+                        "projectImgURL": "assets/img/project_eg.jpg",
                         "projectDetail": "中国历史阶段分割主要通过对中国全历史的生产力，生产关系和权利结构划分几个核心时期。并解释每个核心时期的主要内容。",
                         "projectTagList": [
                                 "历史",
@@ -236,10 +286,10 @@
                 },
                 {
                         "projectId": 4,
-                        "projectCategory": "Other",
+                        "projectCategory": "other",
                         "projectName": "双节棍训练",
                         "projectTime": "2023 07",
-                        "projectImgURL": "",
+                        "projectImgURL": "assets/img/project_eg.jpg",
                         "projectDetail": "双节棍训练旨在通过系统化教学提升双节棍使用技巧，包括基础操作、进阶组合及实战应用，适合各级别爱好者。",
                         "projectTagList": [
                                 "双节棍",
@@ -249,10 +299,10 @@
                 },
                 {
                         "projectId": 5,
-                        "projectCategory": "Hobby",
+                        "projectCategory": "hobby",
                         "projectName": "中国历史阶段分割",
                         "projectTime": "2023 07",
-                        "projectImgURL": "",
+                        "projectImgURL": "assets/img/project_eg.jpg",
                         "projectDetail": "中国历史阶段分割主要通过对中国全历史的生产力，生产关系和权利结构划分几个核心时期。并解释每个核心时期的主要内容",
                         "projectTagList": [
                                 "历史",
@@ -269,6 +319,11 @@
                         "blogCreateDate": "2023 01 24",
                         "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
                         "blogTagList": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP",
+                                "MySQL",
                                 "HTML",
                                 "CSS",
                                 "JavaScript",

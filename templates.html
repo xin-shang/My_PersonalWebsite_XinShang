@@ -4,37 +4,20 @@
                 <div class="category_date">
                         <a href="#home" class="concent__category">
                                 <i class="angle_bracket left_one ri-arrow-left-wide-line"></i>
-                                <p class="category__name">
-                                        category
+                                <p class="category__name" id="category-name">
+                                        <!-- category -->
                                 </p>
                                 <i class="angle_bracket right_one ri-arrow-right-wide-line"></i>
                         </a>
-                        <p class="concent__date">
-                                01 01 2024
+                        <p class="concent__date" id="concent-date">
+                                <!-- 01 01 2024 -->
                         </p>
                 </div>
                 <h3 class="concent__title" id="concent_title">
-                        标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）
+                        <!-- 标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长） -->
                 </h3>
-                <div class="concent__tag_list">
-                        <a href="#home" class="concent__tag_item">
-                                标签一
-                        </a>
-                        <a href="#home" class="concent__tag_item">
-                                标签二
-                        </a>
-                        <a href="#home" class="concent__tag_item">
-                                标签三
-                        </a>
-                        <a href="#home" class="concent__tag_item">
-                                标签四
-                        </a>
-                        <a href="#home" class="concent__tag_item">
-                                标签五
-                        </a>
-                        <a href="#home" class="concent__tag_item">
-                                标签六
-                        </a>
+                <div class="concent__tag_list" id="concent-tag-list">
+                        <!-- <a href="#home" class="concent__tag_item">标签一</a> -->
                 </div>
                 <div class="concent__detail-button">
                         <a href="#home" class="concent__detail" id="concent_detail" data-key="home_concent_detail" data-section="main">
@@ -64,47 +47,47 @@
 
 <!-- 教育组件 -->
 <template class="education__box" id="education_box">
-        <div class="education item" id="education_item">
+        <div class="education item education__item" id="education_item">
                 <div class="name__location">
-                        <p class="university e-name">
-                                University of South Australia
+                        <p class="university e-name" id="university-name">
+                                <!-- University of South Australia -->
                         </p>
-                        <p class="university e-location">
-                                Adelaide, AU
+                        <p class="university e-location" id="university-location">
+                                <!-- Adelaide, AU -->
                         </p>
                 </div>
-                <h3 class="university major">
-                        Bachelor of Information Technology
+                <h3 class="university major" id="university_major">
+                        <!-- Bachelor of Information Technology -->
                 </h3>
-                <p class="university__major-branch">
-                        Mobile Application Development
+                <p class="university__major-branch" id="university_major-branch">
+                        <!-- Mobile Application Development -->
                 </p>
-                <p class="e-date">
-                        09 2020 - 07 2023
+                <p class="e-date" id="university-date">
+                        <!-- 09 2020 - 07 2023 -->
                 </p>
         </div>
 </template>
 
 <!-- 工作组件 -->
 <template class="job__box" id="job_box">
-        <div class="job item" id="job_item">
+        <div class="job item job__item" id="job_item">
                 <div class="name__location">
-                        <p class="company e-name">
-                                UNISA Wing Chun KunFu Club
+                        <p class="company e-name" id="company-name">
+                                <!-- UNISA Wing Chun KunFu Club -->
                         </p>
-                        <p class="company e-location">
-                                Adelaide, AU
+                        <p class="company e-location" id="company-location">
+                                <!-- Adelaide, AU -->
                         </p>
                 </div>
-                <h3 class="position major">
-                        Club Management Mobile Application Developer
+                <h3 class="position major" id="company-project-name">
+                        <!-- Club Management Mobile Application Developer -->
                 </h3>
-                <p class="job__content">
-                        Led a three-person team to completely design and develop the Android application of the club management system, 
-                        and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.
+                <p class="job__content" id="company-project-detail">
+                        <!-- Led a three-person team to completely design and develop the Android application of the club management system, 
+                        and deployed it in the user's cloud server after testing. At present, the number of users reaches 100. -->
                 </p>
-                <p class="e-date">
-                        07 2023 - 12 2023
+                <p class="e-date" id="working-date">
+                        <!-- 07 2023 - 12 2023 -->
                 </p>
         </div>
 </template>
@@ -112,55 +95,27 @@
 <!-- 技能组件 - 技能组 -->
 <template class="skills__box" id="skills_box">
         <div class="skills__item-box swiper-slide" id="skills_item-box">
-                <h3 class="skills__title-name" id="skills_name">
-                        管理部署
+                <h3 class="skills__title-name" id="skillGroup_name">
+                        <!-- 管理部署 -->
                 </h3>
         
                 <div class="skills__detailList" id="skills_detailList">
-                        <div class="skills__detail-item">
-                                <i class="skills_item-icon ri-verified-badge-line"></i>
-                                <div>
-                                        <h3 class="skills__name">
-                                                Git
-                                        </h3>
-                                        <span class="skills__level">
-                                                Basic
-                                        </span>
-                                </div>
-                        </div>
-                        <div class="skills__detail-item">
-                                <i class="skills_item-icon ri-verified-badge-line"></i>
-                                <div>
-                                        <h3 class="skills__name">
-                                                Linux (Shell)
-                                        </h3>
-                                        <span class="skills__level">
-                                                Proficient
-                                        </span>
-                                </div>
-                        </div>
-                        <div class="skills__detail-item">
-                                <i class="skills_item-icon ri-verified-badge-line"></i>
-                                <div>
-                                        <h3 class="skills__name">
-                                                npm, node.js
-                                        </h3>
-                                        <span class="skills__level">
-                                                Proficient
-                                        </span>
-                                </div>
-                        </div>
-                        <div class="skills__detail-item">
-                                <i class="skills_item-icon ri-verified-badge-line"></i>
-                                <div>
-                                        <h3 class="skills__name">
-                                                Nginx
-                                        </h3>
-                                        <span class="skills__level">
-                                                Proficient
-                                        </span>
-                                </div>
-                        </div>
+                        <!-- <template> skill__detail-box -->
+                </div>
+        </div>
+</template>
+
+<!-- 单体技能组件 -->
+<template class="skill__detail-box" id="skill-detail-box">
+        <div class="skills__detail-item" id="skills-detail-item">
+                <i class="skills_item-icon ri-verified-badge-line"></i>
+                <div>
+                        <h3 class="skills__name" id="skills-name">
+                                <!-- Git -->
+                        </h3>
+                        <span class="skills__level" id="skills-level">
+                                <!-- Basic -->
+                        </span>
                 </div>
         </div>
 </template>
@@ -186,31 +141,26 @@
 
 <!--  -->
 <template class="project__box" id="project_box">
-        <div class="project__card mix other"> <!-- mix other mix 后面是用来锚定选择器的 到时候要依次插入 -->
+        <div class="project__card mix" id="project-card"> <!-- mix other mix 后面是用来锚定选择器的 到时候要依次插入 -->
                 <a href="#projects" class="project__click">
                         <div class="project__name_time">
-                                <p class="project__name">
-                                        Android Application Score
+                                <p class="project__name" id="project-name">
+                                        <!-- Android Application Score -->
                                 </p>
-                                <p class="project__time">
-                                        07 2023
+                                <p class="project__time" id="project-time">
+                                        <!-- 07 2023 -->
                                 </p>
                         </div>
                         <article class="project__ae">
-                                <img src="assets/img/project_eg.jpg" alt="project image" class="project__img">
+                                <img src="" alt="project image" class="project__img" id="project-img">
         
                                 <div class="project__modal">
-                                        <p class="project__detail"> <!-- 文章描述前一段 -->
-                                                DataSphere 是一个创新的数据可视化平台，旨在通过直观的图形和实时分析工具，使企业能够深入理解其庞大的数据集。
-                                                DataSphere 的目标是简化数据分析流程，为各行各业的专业人士提供一个易于使用、功能强大的数据探索环境。
+                                        <p class="project__detail" id="project-detail"> <!-- 文章描述前一段 -->
+                                                <!-- DataSphere 是一个创新的数据可视化平台，旨在通过直观的图形和实时分析工具，使企业能够深入理解其庞大的数据集。
+                                                DataSphere 的目标是简化数据分析流程，为各行各业的专业人士提供一个易于使用、功能强大的数据探索环境。 -->
                                         </p>
-                                        <div class="concent__tag_list project__tag_list">
-                                                <a href="#home" class="concent__tag_item project__tag">
-                                                        标签一
-                                                </a>
-                                                <a href="#home" class="concent__tag_item project__tag">
-                                                        标签二
-                                                </a>
+                                        <div class="concent__tag_list project__tag_list" id="project_tag-list">
+                                                <!-- <a href="#home" class="concent__tag_item project__tag">标签一</a> -->
                                         </div>
                                 </div>
                         </article>
@@ -221,4 +171,9 @@
 <!-- 日志选择器，现在暂时不加。以后加这个功能 -->
 <template class="blogs__box-filters" id="blogs_box-filters">
 
+</template>
+
+<!--  -->
+<template class="prepared__activity-box" id="prepared-activity-box">
+        
 </template>

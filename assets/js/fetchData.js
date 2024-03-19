@@ -8,3 +8,13 @@ export function fetchArticleData() {
                 .then(response => response.json())
                 .catch(error => console.error('Error:', error));
 }
+
+// export async function fetchArticleData() {
+//         try {
+//             const response = await fetch('data/article.json');
+//             const data = await response.json();
+//             return data;
+//         } catch (error) {
+//             console.error('Error:', error);
+//         }
+// }

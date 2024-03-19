@@ -333,6 +333,8 @@ svg {
 .search__form {
         display: flex;
         align-items: center;
+        max-width: 50rem;
+        margin-inline: auto;
         column-gap: .5rem;
         background-color: var(--container-color);
         box-shadow: 0 8px 32px hsla(20, 3%, 21%, .3);
@@ -372,6 +374,12 @@ svg {
         font-weight: var(--font-medium);
         color: var(--title-color);
         cursor: pointer;
+}
+
+/* 搜索清除 */
+input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
 }
 
 /* 搜索 - 框 */
@@ -1041,6 +1049,13 @@ svg {
         display: none;
 }
 
+/* 当屏幕宽度小于一定宽度时 */ /* 暂时先写这里，看看以后需不需要合体 */
+/* @media (max-width: 370px) {
+        .concent__tag_list {
+                justify-content: flex-start;
+        }
+} */
+
 /* 模版 - 内容块 - 标签子项 */
 .concent__tag_item {
         font-size: var(--small-font-size);
@@ -1126,7 +1141,6 @@ svg {
 
 /* 模版 - 经历 - 列表 */
 .introduce__content-list {
-        display: grid;
         width: 100%;
         height: auto;
         box-sizing: border-box;
@@ -1396,6 +1410,7 @@ svg {
 }
 
 .blogs__list {
+        display: grid;
         justify-content: center;
 }
 

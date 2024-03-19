@@ -152,16 +152,16 @@
                         <div class="home__container container grid content">
                                 <!-- 文字内容块 -->
                                 <div class="home__text">
-                                        <h1 class="home__title" data-key="home_title" data-section="main">
-                                                Welcome to Xin Shang's Personal Website
+                                        <h1 class="home__title" data-key="home_title" data-section="main" id="home-title">
+                                                <!-- Welcome to Xin Shang's Personal Website -->
                                         </h1>
-                                        <h3 class="home__subtitle" data-key="home_subtitle" data-section="main">
-                                                I am a Programmer & Project Developer
+                                        <h3 class="home__subtitle" data-key="home_subtitle" data-section="main" id="home-subtitle">
+                                                <!-- I am a Programmer & Project Developer -->
                                         </h3>
-                                        <p class="home__description" data-key="home_description" data-section="main">
-                                                I'm a programmer and project developer passionate 
+                                        <p class="home__description" data-key="home_description" data-section="main" id="home-description">
+                                                <!-- I'm a programmer and project developer passionate 
                                                 about creating innovative and impactful solutions. 
-                                                Explore my work and let's connect!
+                                                Explore my work and let's connect! -->
                                         </p>
                                         <a href="#contact" class="button" data-key="home_contact" data-section="main">Contact Me</a>
                                 </div>
@@ -175,8 +175,8 @@
                                                                         <p class="home__data-prompt" data-key="home_prompt-views" data-section="main">
                                                                                 Views
                                                                         </p>
-                                                                        <p class="home__data-num">
-                                                                                13
+                                                                        <p class="home__data-num" id="home-view-num">
+                                                                                <!-- 13 -->
                                                                         </p>
                                                                 </div>
                                                         </a>
@@ -186,8 +186,8 @@
                                                                         <p class="home__data-prompt" data-key="home_prompt-projects" data-section="main">
                                                                                 Projects
                                                                         </p>
-                                                                        <p class="home__data-num">
-                                                                                5
+                                                                        <p class="home__data-num" id="home-project-num">
+                                                                                <!-- 5 -->
                                                                         </p>
                                                                 </div>
                                                                 
@@ -198,8 +198,8 @@
                                                                         <p class="home__data-prompt" data-key="home_prompt-articles" data-section="main">
                                                                                 Articles
                                                                         </p>
-                                                                        <p class="home__data-num">
-                                                                                13
+                                                                        <p class="home__data-num" id="home-article-num">
+                                                                                <!-- 13 -->
                                                                         </p>
                                                                 </div>
                 
@@ -313,11 +313,8 @@
                                                         </defs>
                                                 </svg>
                                         </div>
-                                        <p class="introduce__description" data-key="introduce_description" data-section="main">
-                                                I'm Shang Xin, 
-                                                a graduate from the University of South Australia with a Bachelor's in Information Technology, 
-                                                specializing in Mobile Application Development. 
-                                                Passionate about crafting innovative mobile solutions.
+                                        <p class="introduce__description" id="introduce-description" data-key="introduce_description" data-section="main">
+                                                <!--  -->
                                         </p>
                                         <a href="#introduce" class="button download__but" data-key="introduce_download" data-section="main">Download CV</a>
                                 </div>
@@ -493,6 +490,8 @@
 
         
         <!-- JS -->
+        <script src="assets/js/globalData.js"></script>
+        <script src="assets/js/mainPageData.js" type="module"></script>
         <script src="assets/js/change-lan.js" type="module"></script>
         <script src="assets/js/tool/swiper-bundle.min.js"></script>
         <script src="assets/js/tool/mixitup.min.js"></script>

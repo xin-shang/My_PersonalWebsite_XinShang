@@ -62,6 +62,7 @@
 
         "introduceDescription_en": "I'm Shang Xin, a graduate from the University of South Australia with a Bachelor's in Information Technology, specializing in Mobile Application Development. Passionate about crafting innovative mobile solutions.",
         "introduceDescription_zh": "我是尚鑫，毕业于南澳大学，获得信息技术学士学位，专注于移动应用开发。对创造创新的移动解决方案充满热情。",
+        
         "educationList": [
                 {
                         "educationName": "University of South Australia",
@@ -140,19 +141,11 @@
                                         "skillLevel": "熟练"
                                 },
                                 {
-                                        "skillName": "JavaScript",
+                                        "skillName": "JavaScript & TypeScript",
                                         "skillLevel": "熟练"
                                 },
                                 {
-                                        "skillName": "TypeScript",
-                                        "skillLevel": "熟练"
-                                },
-                                {
-                                        "skillName": "HTML",
-                                        "skillLevel": "熟练"
-                                },
-                                {
-                                        "skillName": "CSS",
+                                        "skillName": "HTML & CSS",
                                         "skillLevel": "熟练"
                                 },
                                 {
@@ -249,18 +242,32 @@
                 {
                         "projectId": 1,
                         "projectCategory": "main",
-                        "projectName": "Android Application Score",
-                        "projectTime": "2023 07",
-                        "projectImgURL": "assets/img/project_eg.jpg",
-                        "projectDetail": "Android Application Score 是一个创新的数据可视化平台，旨在通过直观的图形和实时分析工具，使企业能够深入理解其庞大的数据集。",
+                        "projectName": "Tank War Android Game",
+                        "projectTime": "2022 07",
+                        "projectImgURL": "assets/img/TankWar.png",
+                        "projectDetail": "This is an Android mobile game based on () framework - Tank War. Items, hostile tanks, enemy turrets, and maze terrain were introduced.",
                         "projectTagList": [
-                                "Java",
-                                "JSON",
-                                "MySQL"
+                                "Android",
+                                "Game",
+                                "libGDX"
                         ]
                 },
                 {
                         "projectId": 2,
+                        "projectCategory": "main",
+                        "projectName": "Python Code Checker",
+                        "projectTime": "2022 02",
+                        "projectImgURL": "assets/img/pythonCodeChecker.png",
+                        "projectDetail": "This is a Python Code Checker. Used when teachers assign Python exercises after class. Students will see the problems entered by the teacher. After the question is submitted, it will be automatically graded and the correct answer will be displayed.",
+                        "projectTagList": [
+                                "Java Swing",
+                                "JSON",
+                                "JDBC",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "projectId": 3,
                         "projectCategory": "side",
                         "projectName": "毛选摘抄解析",
                         "projectTime": "2023 07",
@@ -272,7 +279,7 @@
                         ]
                 },
                 {
-                        "projectId": 3,
+                        "projectId": 4,
                         "projectCategory": "hobby",
                         "projectName": "中国历史阶段分割",
                         "projectTime": "2023 07",
@@ -285,29 +292,16 @@
                         ]
                 },
                 {
-                        "projectId": 4,
+                        "projectId": 5,
                         "projectCategory": "other",
                         "projectName": "双节棍训练",
-                        "projectTime": "2023 07",
+                        "projectTime": "2021 06",
                         "projectImgURL": "assets/img/project_eg.jpg",
                         "projectDetail": "双节棍训练旨在通过系统化教学提升双节棍使用技巧，包括基础操作、进阶组合及实战应用，适合各级别爱好者。",
                         "projectTagList": [
                                 "双节棍",
                                 "武术",
                                 "训练"
-                        ]
-                },
-                {
-                        "projectId": 5,
-                        "projectCategory": "hobby",
-                        "projectName": "中国历史阶段分割",
-                        "projectTime": "2023 07",
-                        "projectImgURL": "assets/img/project_eg.jpg",
-                        "projectDetail": "中国历史阶段分割主要通过对中国全历史的生产力，生产关系和权利结构划分几个核心时期。并解释每个核心时期的主要内容",
-                        "projectTagList": [
-                                "历史",
-                                "生产",
-                                "权利"
                         ]
                 }
         ],

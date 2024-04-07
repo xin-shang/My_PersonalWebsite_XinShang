@@ -1329,6 +1329,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* 模版 - 项目 - 图片 */
+.project__img {
+        width: auto;
+        height: 100%;
+}
 
 /* 模版 - 项目 - 细节框 */
 .project__modal {

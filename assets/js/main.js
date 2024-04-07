@@ -208,6 +208,7 @@ scrollToTopButton.addEventListener('click', function(e) {
  * 
 */
 const storedArray = JSON.parse(sessionStorage.getItem('activityList')); // 应该加限制条件
+console.log(storedArray);
 const activitySumNum = storedArray.length;
 
 let isFirstCall = true;
@@ -278,9 +279,6 @@ document.addEventListener('DOMContentLoaded', function(){
                         }
                 }
         }
-
-        
-        
 });
 
 

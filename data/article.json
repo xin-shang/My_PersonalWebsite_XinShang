@@ -271,7 +271,7 @@
                         "projectCategory": "side",
                         "projectName": "毛选摘抄解析",
                         "projectTime": "2023 07",
-                        "projectImgURL": "assets/img/project_eg.jpg",
+                        "projectImgURL": "assets/img/maoxuan.jpeg",
                         "projectDetail": "毛选摘抄解析旨在深入研究和讲解毛泽东思想精华，提供历史背景、思想内容及其现实意义的全面解析。",
                         "projectTagList": [
                                 "文章",
@@ -283,7 +283,7 @@
                         "projectCategory": "hobby",
                         "projectName": "中国历史阶段分割",
                         "projectTime": "2023 07",
-                        "projectImgURL": "assets/img/project_eg.jpg",
+                        "projectImgURL": "assets/img/zhongguo.jpeg",
                         "projectDetail": "中国历史阶段分割主要通过对中国全历史的生产力，生产关系和权利结构划分几个核心时期。并解释每个核心时期的主要内容。",
                         "projectTagList": [
                                 "历史",
@@ -296,12 +296,40 @@
                         "projectCategory": "other",
                         "projectName": "双节棍训练",
                         "projectTime": "2021 06",
-                        "projectImgURL": "assets/img/project_eg.jpg",
+                        "projectImgURL": "assets/img/shuangjiegun.jpg",
                         "projectDetail": "双节棍训练旨在通过系统化教学提升双节棍使用技巧，包括基础操作、进阶组合及实战应用，适合各级别爱好者。",
                         "projectTagList": [
                                 "双节棍",
                                 "武术",
                                 "训练"
+                        ]
+                },
+                {
+                        "projectId": 6,
+                        "projectCategory": "main",
+                        "projectName": "Meeting Timer",
+                        "projectTime": "2020 07",
+                        "projectImgURL": "assets/img/MeetingTimer.png",
+                        "projectDetail": "This is a meeting timer tool designed to schedule and monitor different segments of a meeting. It features functions to add, edit, and delete subtasks, along with options to import and export meetings.",
+                        "projectTagList": [
+                                "Java Swing",
+                                "PC Software"
+                        ]
+                },
+                {
+                        "projectId": 7,
+                        "projectCategory": "main",
+                        "projectName": "Persional Website",
+                        "projectTime": "2024 03",
+                        "projectImgURL": "assets/img/PersionalWebsite.png",
+                        "projectDetail": "This is my personal website. To show my basic information, articles and projects.",
+                        "projectTagList": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP",
+                                "MVC",
+                                "MySQL"
                         ]
                 }
         ],

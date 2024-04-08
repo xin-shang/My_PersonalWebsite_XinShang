@@ -207,9 +207,16 @@ scrollToTopButton.addEventListener('click', function(e) {
 /**
  * 
 */
-const storedArray = JSON.parse(sessionStorage.getItem('activityList')); // 应该加限制条件
+// const storedArray = JSON.parse(sessionStorage.getItem('activityList')); // 应该加限制条件
+// console.log(storedArray);
+// const activitySumNum = storedArray.length;
+// 尝试从 sessionStorage 中获取 activityList，如果不存在，则设置为一个空数组
+const storedArray = JSON.parse(sessionStorage.getItem('activityList')) || [];
 console.log(storedArray);
+
+// 计算 storedArray 的长度，此时 storedArray 要么是一个空数组，要么是一个包含项的数组
 const activitySumNum = storedArray.length;
+
 
 let isFirstCall = true;
 

@@ -1555,6 +1555,12 @@ input[type="search"]::-webkit-search-cancel-button {
         }
 
         /*  */
+        .blogs__list {
+                display: inline-grid;
+                justify-content: center;
+        }
+
+        /*  */
         .project__detail {
                 font-size: var(--small-font-size);
         }

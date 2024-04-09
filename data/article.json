@@ -84,14 +84,14 @@
                         "companyName": "UNISA Wing Chun KunFu Club",
                         "companyLocation": "Adelaide, AU",
                         "companyProject": "Club Management Mobile Application Developer",
-                        "jobContent": "Led a three-person team to completely design and develop the Android application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
+                        "jobContent": "Led a three-person team to completely design and develop the mobile application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
                         "jobDate": "07 2023 - 12 2023"
                 },
                 {
                         "companyName": "UNISA Wing Chun KunFu Club",
                         "companyLocation": "Adelaide, AU",
                         "companyProject": "Club Management Mobile Application Developer",
-                        "jobContent": "Led a three-person team to completely design and develop the Android application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
+                        "jobContent": "Led a three-person team to completely design and develop the mobile application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
                         "jobDate": "07 2023 - 12 2023"
                 }
         ],
@@ -242,6 +242,37 @@
                 {
                         "projectId": 1,
                         "projectCategory": "main",
+                        "projectName": "Persional Website",
+                        "projectTime": "2024 03",
+                        "projectImgURL": "assets/img/PersionalWebsite.png",
+                        "projectDetail": "This is my personal website. To show my basic information, articles and projects.",
+                        "projectTagList": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "PHP",
+                                "MVC",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "projectId": 2,
+                        "projectCategory": "main",
+                        "projectName": "Club Management App",
+                        "projectTime": "2023 09",
+                        "projectImgURL": "assets/img/clubManagement.png",
+                        "projectDetail": "这是一款正在被使用的手机应用程序。设计开发俱乐部管理系统的移动端应用，经过测试后部署在用户云服务器上。",
+                        "projectTagList": [
+                                "Android",
+                                "IOS",
+                                "Java",
+                                "PHP",
+                                "MySQL"
+                        ]
+                },
+                {
+                        "projectId": 3,
+                        "projectCategory": "main",
                         "projectName": "Tank War Android Game",
                         "projectTime": "2022 07",
                         "projectImgURL": "assets/img/TankWar.png",
@@ -253,7 +284,7 @@
                         ]
                 },
                 {
-                        "projectId": 2,
+                        "projectId": 4,
                         "projectCategory": "main",
                         "projectName": "Python Code Checker",
                         "projectTime": "2022 02",
@@ -267,7 +298,7 @@
                         ]
                 },
                 {
-                        "projectId": 3,
+                        "projectId": 5,
                         "projectCategory": "side",
                         "projectName": "毛选摘抄解析",
                         "projectTime": "2023 07",
@@ -279,7 +310,7 @@
                         ]
                 },
                 {
-                        "projectId": 4,
+                        "projectId": 6,
                         "projectCategory": "hobby",
                         "projectName": "中国历史阶段分割",
                         "projectTime": "2023 07",
@@ -292,7 +323,7 @@
                         ]
                 },
                 {
-                        "projectId": 5,
+                        "projectId": 7,
                         "projectCategory": "other",
                         "projectName": "双节棍训练",
                         "projectTime": "2021 06",
@@ -305,7 +336,7 @@
                         ]
                 },
                 {
-                        "projectId": 6,
+                        "projectId": 8,
                         "projectCategory": "main",
                         "projectName": "Meeting Timer",
                         "projectTime": "2020 07",
@@ -314,22 +345,6 @@
                         "projectTagList": [
                                 "Java Swing",
                                 "PC Software"
-                        ]
-                },
-                {
-                        "projectId": 7,
-                        "projectCategory": "main",
-                        "projectName": "Persional Website",
-                        "projectTime": "2024 03",
-                        "projectImgURL": "assets/img/PersionalWebsite.png",
-                        "projectDetail": "This is my personal website. To show my basic information, articles and projects.",
-                        "projectTagList": [
-                                "HTML",
-                                "CSS",
-                                "JavaScript",
-                                "PHP",
-                                "MVC",
-                                "MySQL"
                         ]
                 }
         ],

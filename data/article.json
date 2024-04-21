@@ -3,7 +3,7 @@
         "userName_zh": "尚鑫",
         "userRole_en": "Programmer & Developer",
         "userRole_zh": "程序员 & 开发者",
-
+        
         "facebookURL": "https://www.facebook.com/",
         "douyinURL": "https://www.douyin.com/",
         "bilibiliURL": "https://www.bilibili.com/",
@@ -38,7 +38,7 @@
                         "activityId": 2,
                         "activityCategory": "Android",
                         "activityCreateDate": "2023 01 24",
-                        "activityTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
+                        "activityTitle": "使用 React 模拟网站",
                         "activityTagList": [
                                 "React",
                                 "Java",
@@ -70,23 +70,9 @@
                         "educationMajor": "Bachelor of Information Technology",
                         "educationMajorBranch": "Mobile Application Development",
                         "educationDate": "2020 09 - 2023 07"
-                },
-                {
-                        "educationName": "University of South Australia",
-                        "educationLocation": "Adelaide, AU",
-                        "educationMajor": "Bachelor of Information Technology",
-                        "educationMajorBranch": "Mobile Application Development",
-                        "educationDate": "2020 09 - 2023 07"
                 }
         ],
         "jobList": [
-                {
-                        "companyName": "UNISA Wing Chun KunFu Club",
-                        "companyLocation": "Adelaide, AU",
-                        "companyProject": "Club Management Mobile Application Developer",
-                        "jobContent": "Led a three-person team to completely design and develop the mobile application of the club management system, and deployed it in the user's cloud server after testing. At present, the number of users reaches 100.",
-                        "jobDate": "07 2023 - 12 2023"
-                },
                 {
                         "companyName": "UNISA Wing Chun KunFu Club",
                         "companyLocation": "Adelaide, AU",
@@ -276,7 +262,7 @@
                         "projectName": "Tank War Android Game",
                         "projectTime": "2022 07",
                         "projectImgURL": "assets/img/TankWar.png",
-                        "projectDetail": "This is an Android mobile game based on () framework - Tank War. Items, hostile tanks, enemy turrets, and maze terrain were introduced.",
+                        "projectDetail": "This is an Android mobile game based on libGDX framework - Tank War. Items, hostile tanks, enemy turrets, and maze terrain were introduced.",
                         "projectTagList": [
                                 "Android",
                                 "Game",
@@ -306,7 +292,7 @@
                         "projectDetail": "毛选摘抄解析旨在深入研究和讲解毛泽东思想精华，提供历史背景、思想内容及其现实意义的全面解析。",
                         "projectTagList": [
                                 "文章",
-                                "马哲"
+                                "毛共"
                         ]
                 },
                 {
@@ -366,91 +352,6 @@
                                 "JavaScript",
                                 "PHP",
                                 "MySQL"
-                        ]
-                },
-                {
-                        "blogId": 2,
-                        "blogCategory": "Android",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "React",
-                                "Java",
-                                "SpringBoot",
-                                "MySQL"
-                        ]
-                },
-                {
-                        "blogId": 3,
-                        "blogCategory": "Linux",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "ArchLinux",
-                                "Shell",
-                                "Sever",
-                                "C++"
-                        ]
-                },
-                {
-                        "blogId": 4,
-                        "blogCategory": "Web",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "HTML",
-                                "CSS",
-                                "JavaScript",
-                                "PHP",
-                                "MySQL"
-                        ]
-                },
-                {
-                        "blogId": 5,
-                        "blogCategory": "Android",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "React",
-                                "Java",
-                                "SpringBoot",
-                                "MySQL"
-                        ]
-                },
-                {
-                        "blogId": 6,
-                        "blogCategory": "Linux",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "ArchLinux",
-                                "Shell",
-                                "Sever",
-                                "C++"
-                        ]
-                },
-                {
-                        "blogId": 7,
-                        "blogCategory": "Android",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "React",
-                                "Java",
-                                "SpringBoot",
-                                "MySQL"
-                        ]
-                },
-                {
-                        "blogId": 8,
-                        "blogCategory": "Linux",
-                        "blogCreateDate": "2023 01 24",
-                        "blogTitle": "标题要全显示：（以后可以可以考虑在上传端添加限制条件保证标题不会过长）",
-                        "blogTagList": [
-                                "ArchLinux",
-                                "Shell",
-                                "Sever",
-                                "C++"
                         ]
                 }
         ],

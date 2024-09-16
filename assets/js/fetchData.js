@@ -18,3 +18,10 @@ export function fetchArticleData() {
 //             console.error('Error:', error);
 //         }
 // }
+
+// index.html 的 JSON 数据请求 （服务器）
+// export function fetchArticleData() {
+//         return fetch('http://localhost:8080/test.php')
+//                 .then(response => response.json())
+//                 .catch(error => console.error('Error:', error));
+// }
